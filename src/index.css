@@ -1,0 +1,357 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* SafeRoute AI+ Design System */
+  --bg: #05070F;
+  --bg2: #0C1020;
+  --bg3: #0A0E1A;
+  --mint: #00E5A0;
+  --mint2: #00B894;
+  --coral: #FF6B4A;
+  --amber: #FBBF24;
+  --amber2: #FB923C;
+  --sky: #38BDF8;
+  --purple: #A78BFA;
+  --text: #F5F0E8;
+  --muted: rgba(245, 240, 232, 0.45);
+  --border: rgba(251, 146, 60, 0.18);
+  --border2: rgba(255, 255, 255, 0.07);
+  
+  /* Semantic tokens */
+  --background: #05070F;
+  --foreground: #F5F0E8;
+  --card: #0C1020;
+  --card-foreground: #F5F0E8;
+  --popover: #0C1020;
+  --popover-foreground: #F5F0E8;
+  --primary: #00E5A0;
+  --primary-foreground: #05070F;
+  --secondary: #0A0E1A;
+  --secondary-foreground: #F5F0E8;
+  --muted-bg: #0A0E1A;
+  --muted-foreground: rgba(245, 240, 232, 0.45);
+  --accent: #FB923C;
+  --accent-foreground: #05070F;
+  --destructive: #FF6B4A;
+  --destructive-foreground: #F5F0E8;
+  --input: #0C1020;
+  --ring: #FB923C;
+  --radius: 0.625rem;
+  
+  /* Sidebar */
+  --sidebar: #0A0E1A;
+  --sidebar-foreground: #F5F0E8;
+  --sidebar-primary: #FB923C;
+  --sidebar-primary-foreground: #05070F;
+  --sidebar-accent: #0C1020;
+  --sidebar-accent-foreground: #F5F0E8;
+  --sidebar-border: rgba(251, 146, 60, 0.18);
+  --sidebar-ring: #FB923C;
+  
+  /* Chart colors */
+  --chart-1: #00E5A0;
+  --chart-2: #38BDF8;
+  --chart-3: #A78BFA;
+  --chart-4: #FBBF24;
+  --chart-5: #FF6B4A;
+}
+
+@theme inline {
+  --font-sans: 'Lato', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-mono: 'DM Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted-bg);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Custom colors */
+  --color-mint: #00E5A0;
+  --color-mint2: #00B894;
+  --color-coral: #FF6B4A;
+  --color-amber: #FBBF24;
+  --color-amber2: #FB923C;
+  --color-sky: #38BDF8;
+  --color-purple: #A78BFA;
+  --color-bg: #05070F;
+  --color-bg2: #0C1020;
+  --color-bg3: #0A0E1A;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-bg text-foreground;
+    font-weight: 400;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(12, 16, 32, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(251, 146, 60, 0.18);
+}
+
+.glass-dark {
+  background: rgba(5, 7, 15, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Dot grid background */
+.dot-grid {
+  background-image: radial-gradient(rgba(251, 191, 36, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Noise grain overlay */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Scan line animation */
+.scan-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(251, 146, 60, 0.12);
+  animation: scan 12s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+/* Pulse animation */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Ping animation */
+@keyframes ping-marker {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.animate-ping-marker {
+  animation: ping-marker 1.5s ease-out infinite;
+}
+
+/* Glow animation */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 229, 160, 0.4), 0 0 40px rgba(0, 229, 160, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(0, 229, 160, 0.6), 0 0 60px rgba(0, 229, 160, 0.3); }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Ripple animation */
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+.animate-ripple {
+  animation: ripple 2s ease-out infinite;
+}
+
+/* Flow animation for route paths */
+@keyframes flow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -40; }
+}
+
+.animate-flow {
+  animation: flow 1s linear infinite;
+}
+
+/* Waveform animation */
+@keyframes waveform {
+  0%, 100% { height: 8px; }
+  50% { height: 24px; }
+}
+
+.animate-waveform {
+  animation: waveform 0.8s ease-in-out infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Progress bar animation */
+@keyframes progress {
+  from { width: 0%; }
+}
+
+.animate-progress {
+  animation: progress 0.5s ease-out;
+}
+
+/* Ring expand animation */
+@keyframes ring-expand {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+.animate-ring-expand {
+  animation: ring-expand 1s ease-out infinite;
+}
+
+/* Gradient button */
+.btn-mint-gradient {
+  background: linear-gradient(135deg, var(--mint) 0%, var(--mint2) 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-mint-gradient:hover {
+  box-shadow: 0 0 30px rgba(0, 229, 160, 0.5);
+}
+
+/* Status indicator colors */
+.status-safe { background-color: var(--mint); }
+.status-caution { background-color: var(--amber); }
+.status-danger { background-color: var(--coral); }
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(251, 146, 60, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 146, 60, 0.5);
+}
+ 
+/* ── RESPONSIVE MAP & VIEWPORT FIXES ──────────────────────────
+   These rules fix three device-specific problems:
+ 
+   1. iOS Safari 100vh bug: h-screen = 100vh which gets clipped by
+      Safari's address bar. We override the app root to use 100dvh
+      (dynamic viewport height) so the map always fills the real
+      visible area, even when the browser chrome is showing.
+ 
+   2. iPhone home bar safe-area: On notch/home-bar iPhones the
+      bottom nav sits behind the system gesture strip without this.
+      env(safe-area-inset-bottom) adds the exact correct padding.
+ 
+   3. iPad portrait map breathing room: iPad portrait (768px) is
+      treated as mobile. The bottom sidebar sheets are capped at
+      a lower max-height so the map remains visible behind them.
+*/
+ 
+/* Fix 1 — iOS Safari full-height map */
+.h-screen {
+  height: 100dvh; /* dvh = dynamic viewport height, collapses with browser chrome */
+}
+ 
+/* Fix 2 — iPhone home bar safe-area inset on bottom nav */
+nav.md\:hidden {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  height: calc(4rem + env(safe-area-inset-bottom, 0px));
+}
+ 
+/* Fix 3 — iPad portrait: slightly shallower bottom sheets so map shows */
+@media (min-width: 640px) and (max-width: 768px) {
+  .max-h-\[72vh\]  { max-height: 55vh !important; }
+  .max-h-\[88vh\]  { max-height: 58vh !important; }
+}
+ 
+/* Mapbox canvas always fills its container — prevents blank tiles on resize */
+.mapboxgl-map {
+  position: absolute !important;
+  top: 0; left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+ 
+/* Prevent iOS rubber-band scroll on the map container */
+.mapboxgl-canvas-container {
+  touch-action: none;
+  -webkit-overflow-scrolling: auto;
+}
+ 
+/* Mapbox attribution — keep it readable but unobtrusive on mobile */
+.mapboxgl-ctrl-bottom-right,
+.mapboxgl-ctrl-bottom-left {
+  bottom: env(safe-area-inset-bottom, 0px) !important;
+}

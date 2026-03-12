@@ -1,0 +1,3367 @@
+{
+  "generated": "2026-03-07",
+  "source": "Montgomery Alabama Open Data Portal",
+  "emergency_calls_2025": {
+    "January": 22575,
+    "February": 21847,
+    "March": 24710,
+    "April": 24299,
+    "May": 25954,
+    "June": 25088,
+    "July": 28973
+  },
+  "avg_monthly_emergency_calls": 24778,
+  "neighborhoods": [
+    {
+      "id": "downtown",
+      "name": "Downtown District",
+      "lat": 32.3769,
+      "lng": -86.3012,
+      "radius_deg": 0.02,
+      "food_violations": 5,
+      "nuisances": 108,
+      "risk_score": 85,
+      "risk_level": "HIGH"
+    },
+    {
+      "id": "oakpark",
+      "name": "Oak Park",
+      "lat": 32.3901,
+      "lng": -86.3198,
+      "radius_deg": 0.025,
+      "food_violations": 2,
+      "nuisances": 141,
+      "risk_score": 75,
+      "risk_level": "HIGH"
+    },
+    {
+      "id": "cloverdale",
+      "name": "Cloverdale",
+      "lat": 32.3654,
+      "lng": -86.2891,
+      "radius_deg": 0.02,
+      "food_violations": 4,
+      "nuisances": 97,
+      "risk_score": 85,
+      "risk_level": "HIGH"
+    },
+    {
+      "id": "fairview",
+      "name": "Fairview",
+      "lat": 32.3543,
+      "lng": -86.3312,
+      "radius_deg": 0.025,
+      "food_violations": 1,
+      "nuisances": 130,
+      "risk_score": 70,
+      "risk_level": "HIGH"
+    },
+    {
+      "id": "hull",
+      "name": "Hull Street Corridor",
+      "lat": 32.3834,
+      "lng": -86.2956,
+      "radius_deg": 0.015,
+      "food_violations": 3,
+      "nuisances": 40,
+      "risk_score": 80,
+      "risk_level": "HIGH"
+    },
+    {
+      "id": "eastchase",
+      "name": "Eastchase",
+      "lat": 32.3588,
+      "lng": -86.1635,
+      "radius_deg": 0.03,
+      "food_violations": 3,
+      "nuisances": 4,
+      "risk_score": 52,
+      "risk_level": "MEDIUM"
+    },
+    {
+      "id": "midtown",
+      "name": "Midtown",
+      "lat": 32.3703,
+      "lng": -86.2692,
+      "radius_deg": 0.02,
+      "food_violations": 8,
+      "nuisances": 90,
+      "risk_score": 85,
+      "risk_level": "HIGH"
+    }
+  ],
+  "food_violations": [
+    {
+      "name": "American Wings",
+      "address": "1955 Coliseum Boulevard",
+      "score": 80,
+      "date": "2025/09/30",
+      "lat": 32.38296,
+      "lng": -86.27049,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Ay Taco",
+      "address": "8125 Decker Lane Ste K",
+      "score": 78,
+      "date": "2025/11/05",
+      "lat": 32.37662,
+      "lng": -86.16337,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Capitol Heights Mini Mart",
+      "address": "1705 Upper Wetumpka Road",
+      "score": 82,
+      "date": "2025/10/08",
+      "lat": 32.37776,
+      "lng": -86.28566,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "CaraVita Village",
+      "address": "4000 Fieldcrest Drive",
+      "score": 78,
+      "date": "2025/05/13",
+      "lat": 32.36913,
+      "lng": -86.25438,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Church's Chicken #4979",
+      "address": "6826 Atlanta Highway",
+      "score": 84,
+      "date": "2025/10/09",
+      "lat": 32.37718,
+      "lng": -86.18394,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Fairview Mart",
+      "address": "541 West Fairview Avenue",
+      "score": 77,
+      "date": "2024/12/17",
+      "lat": 32.37249,
+      "lng": -86.31562,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Highland Meat & Grocery",
+      "address": "2710 Highland Avenue",
+      "score": 79,
+      "date": "2025/09/04",
+      "lat": 32.3757,
+      "lng": -86.27414,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Holt Street CDC",
+      "address": "1870 South Court Street",
+      "score": 78,
+      "date": "2025/10/21",
+      "lat": 32.37292,
+      "lng": -86.30956,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Jan's Beach House Grill",
+      "address": "850 Eastern Boulevard",
+      "score": 81,
+      "date": "2025/09/15",
+      "lat": 32.37508,
+      "lng": -86.21589,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Jason's Deli",
+      "address": "1520 Eastern Boulevard",
+      "score": 83,
+      "date": "2025/09/11",
+      "lat": 32.37341,
+      "lng": -86.22281,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Lion's Pride #103",
+      "address": "3345 Harrison Road",
+      "score": 84,
+      "date": "2025/10/30",
+      "lat": 32.37495,
+      "lng": -86.25786,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Lion's Pride #102",
+      "address": "640 Eastern Boulevard",
+      "score": 81,
+      "date": "2025/10/28",
+      "lat": 32.37558,
+      "lng": -86.21469,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Marisqueria Ramirez",
+      "address": "1863 Mount Meigs Road",
+      "score": 80,
+      "date": "2025/06/17",
+      "lat": 32.37651,
+      "lng": -86.28255,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Ocean Seafood and Chicken",
+      "address": "5951 Atlanta Highway",
+      "score": 77,
+      "date": "2025/10/16",
+      "lat": 32.37733,
+      "lng": -86.20118,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Panda House",
+      "address": "7036 Atlanta Highway",
+      "score": 75,
+      "date": "2025/10/22",
+      "lat": 32.37711,
+      "lng": -86.17859,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "PB Hibachi Express",
+      "address": "2323 Eastern Boulevard",
+      "score": 75,
+      "date": "2025/09/26",
+      "lat": 32.37225,
+      "lng": -86.22384,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Taqueria EL Campesino",
+      "address": "1550 Mount Meigs Road",
+      "score": 78,
+      "date": "2025/11/12",
+      "lat": 32.37613,
+      "lng": -86.28778,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Taqueria La Bendicion",
+      "address": "4448 Troy Highway",
+      "score": 80,
+      "date": "2025/09/10",
+      "lat": 32.36629,
+      "lng": -86.2283,
+      "risk": "MEDIUM"
+    },
+    {
+      "name": "Wings 101",
+      "address": "2445 East South Boulevard",
+      "score": 80,
+      "date": "2025/09/24",
+      "lat": 32.36875,
+      "lng": -86.26134,
+      "risk": "MEDIUM"
+    }
+  ],
+  "nuisances": [
+    {
+      "address": "1621 CARTER HILL RD",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* THERE IS LITTER JUNK AND TRASH AND OVERGROWN GRASS.AL",
+      "date": "2025/01/07",
+      "lat": 32.3737,
+      "lng": -86.2855
+    },
+    {
+      "address": "2020 EAST SOUTH BLVD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/07",
+      "lat": 32.36846,
+      "lng": -86.28228
+    },
+    {
+      "address": "105 LONGVIEW CT",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, WEEDS* ENTIRE PARCEL MUST BE CLEANED AND RID OF ALL JUNK IN YARD",
+      "date": "2025/01/07",
+      "lat": 32.37432,
+      "lng": -86.35768
+    },
+    {
+      "address": "119 LONGVIEW CT",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* 1 BLUE SUV",
+      "date": "2025/01/07",
+      "lat": 32.3742,
+      "lng": -86.35703
+    },
+    {
+      "address": "123 LONGVIEW CT",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, BLDG. MATERIAL, DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* 1 ",
+      "date": "2025/01/07",
+      "lat": 32.37417,
+      "lng": -86.35685
+    },
+    {
+      "address": "2703 OLD SELMA RD",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* 1 PURPLE CAR1 BLACK CAR",
+      "date": "2025/01/07",
+      "lat": 32.37454,
+      "lng": -86.35962
+    },
+    {
+      "address": "132 LONGVIEW CT",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, AUTO PARTS, BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, WEEDS",
+      "date": "2025/01/07",
+      "lat": 32.37403,
+      "lng": -86.35697
+    },
+    {
+      "address": "52 LONGVIEW CT",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, WEEDS* ENTIRE PARCEL MUST BE CLEANED AND RID OF ALL JUNK IN YARD",
+      "date": "2025/01/07",
+      "lat": 32.37425,
+      "lng": -86.35822
+    },
+    {
+      "address": "6 LONGVIEW CT",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, WEEDS* ALL JUNK AND DEBRIS BE REMOVED FROM PARCEL PLE",
+      "date": "2025/01/07",
+      "lat": 32.37448,
+      "lng": -86.35944
+    },
+    {
+      "address": "29 WEST PATTON AVE",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL SCATTERED AUTO PARTS AND DE",
+      "date": "2025/01/07",
+      "lat": 32.36975,
+      "lng": -86.30871
+    },
+    {
+      "address": "3109 GENTILLY CT",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* THERE IS A BLACK CAR AND A BLACK VAN I",
+      "date": "2025/01/07",
+      "lat": 32.36673,
+      "lng": -86.24661
+    },
+    {
+      "address": "3541 WOODPARK DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/07",
+      "lat": 32.36466,
+      "lng": -86.2671
+    },
+    {
+      "address": "10510 CHANTILLY PKWY",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37334,
+      "lng": -86.14394
+    },
+    {
+      "address": "4019 SOUTH COURT ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, TREE LIMBS, TREE STUMPS, TREE VIOLATION* ALL TREE LIMBS IN YARD AND ON HOUSE ",
+      "date": "2025/01/21",
+      "lat": 32.36938,
+      "lng": -86.30741
+    },
+    {
+      "address": "562 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, JUNK VEHICLES, TIRES* ALL INOPERABLE VEHICLES ON PROPERTY WITH FLAT TIRES, EXPIRED OR ",
+      "date": "2025/02/04",
+      "lat": 32.38256,
+      "lng": -86.27202
+    },
+    {
+      "address": "1611 COLISEUM BLVD",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, JUNK VEHICLES* REMOVE THE FOLLOWING (4) JUNK VEHICLES FROM PROPERTY: SILVER HYUNDAI GE",
+      "date": "2025/02/04",
+      "lat": 32.38238,
+      "lng": -86.27039
+    },
+    {
+      "address": "3001 BILTMORE AVE",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, DEBRIS, FURNITURE, JUNK VEHICLES, LITTER, JUNK, TRASH, TIRES* WHITE CHEVY SUV, WHITE C",
+      "date": "2025/02/04",
+      "lat": 32.37891,
+      "lng": -86.26505
+    },
+    {
+      "address": "3066 PELZER AVE",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, FURNITURE, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* VEH",
+      "date": "2025/02/04",
+      "lat": 32.37835,
+      "lng": -86.2623
+    },
+    {
+      "address": "17 SALEM DR",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* BLACK CAR",
+      "date": "2025/02/04",
+      "lat": 32.37773,
+      "lng": -86.2642
+    },
+    {
+      "address": "10480 CHANTILLY PKWY",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/07",
+      "lat": 32.37362,
+      "lng": -86.14374
+    },
+    {
+      "address": "4411 NORMAN BRIDGE RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, WEEDS* ENTIRE LOT MUST BE CLEARED OF LITTER A",
+      "date": "2025/02/04",
+      "lat": 32.36715,
+      "lng": -86.29777
+    },
+    {
+      "address": "524 LINCOLN ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* THE OWNER OF THE PROPERTY IS RESPONSIBLE FOR ",
+      "date": "2025/02/04",
+      "lat": 32.37308,
+      "lng": -86.31504
+    },
+    {
+      "address": "720 EASTERN BLVD",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, AUTO PARTS, BLDG. MATERIAL, CARPET, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN ",
+      "date": "2025/02/04",
+      "lat": 32.37529,
+      "lng": -86.21538
+    },
+    {
+      "address": "230 SOUTHLAWN DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, WOOD* A LARGE AMOUNT OF TRASH AND HOUSEHOL",
+      "date": "2025/02/04",
+      "lat": 32.36532,
+      "lng": -86.34546
+    },
+    {
+      "address": "1709 CROUSON ST",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, AUTO PARTS, BLDG. MATERIAL, DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, WEEDS* REMOVE ",
+      "date": "2025/01/07",
+      "lat": 32.38161,
+      "lng": -86.28428
+    },
+    {
+      "address": "3466 BROADVIEW ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL SCATTERED DEBRIS FROM PROPERTY",
+      "date": "2025/01/07",
+      "lat": 32.38187,
+      "lng": -86.28174
+    },
+    {
+      "address": "332 STERLING DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, LITTER, JUNK, TRASH",
+      "date": "2025/01/21",
+      "lat": 32.37659,
+      "lng": -86.23981
+    },
+    {
+      "address": "4534 WARES FERRY RD",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH",
+      "date": "2025/01/21",
+      "lat": 32.37829,
+      "lng": -86.22667
+    },
+    {
+      "address": "1263 WOODBRIDGE DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, CARPET, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.36676,
+      "lng": -86.28379
+    },
+    {
+      "address": "4726 NARROW LANE RD",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, BLDG. MATERIAL, CARPET, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES",
+      "date": "2025/01/21",
+      "lat": 32.36663,
+      "lng": -86.28417
+    },
+    {
+      "address": "1250 BASSETT DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, CARPET, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.36682,
+      "lng": -86.28421
+    },
+    {
+      "address": "108 LAUDERDALE ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.36617,
+      "lng": -86.26138
+    },
+    {
+      "address": "4408 SOUTH COURT ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.36827,
+      "lng": -86.30798
+    },
+    {
+      "address": "4228 SOUTH COURT ST",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, AUTO PARTS, DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* 1 RED ",
+      "date": "2025/01/21",
+      "lat": 32.36888,
+      "lng": -86.30808
+    },
+    {
+      "address": "225 MELANIE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS, WOOD* OVERGROWN GRASS IN BACK YARD",
+      "date": "2025/02/04",
+      "lat": 32.37643,
+      "lng": -86.21761
+    },
+    {
+      "address": "3766 SOUTH COURT ST",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* 1 RED CAR",
+      "date": "2025/01/21",
+      "lat": 32.37046,
+      "lng": -86.3082
+    },
+    {
+      "address": "3932 OAK ST",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, AUTO PARTS, BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, TIRES* ENTIRE PARCEL MUST BE ",
+      "date": "2025/01/21",
+      "lat": 32.36981,
+      "lng": -86.32118
+    },
+    {
+      "address": "6109 OAKLEIGH RD",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.36521,
+      "lng": -86.2285
+    },
+    {
+      "address": "3860 SOUTH COURT ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* INSIDE THE SMALL FENCED AREA ",
+      "date": "2025/01/21",
+      "lat": 32.37002,
+      "lng": -86.30823
+    },
+    {
+      "address": "1814 ROSA L PARKS AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.3729,
+      "lng": -86.31624
+    },
+    {
+      "address": "1651 OAK ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37321,
+      "lng": -86.32357
+    },
+    {
+      "address": "1635 OAK ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37323,
+      "lng": -86.32357
+    },
+    {
+      "address": "LINCOLN ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37302,
+      "lng": -86.3153
+    },
+    {
+      "address": "537 LINCOLN ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37302,
+      "lng": -86.31519
+    },
+    {
+      "address": "339 GROVE PARK DR",
+      "type": "NUISANCE",
+      "remarks": "* CARPET, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, TREE LIMBS, WEEDS, WOOD",
+      "date": "2025/02/04",
+      "lat": 32.37829,
+      "lng": -86.24199
+    },
+    {
+      "address": "521 LINCOLN ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37302,
+      "lng": -86.31497
+    },
+    {
+      "address": "533 LINCOLN ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37302,
+      "lng": -86.31508
+    },
+    {
+      "address": "2237 EDWARD J NETTLES LN",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, FURNITURE, LITTER, JUNK, TRASH",
+      "date": "2025/01/21",
+      "lat": 32.37308,
+      "lng": -86.32906
+    },
+    {
+      "address": "2237 EDWARD J NETTLES LN",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, FURNITURE, LITTER, JUNK, TRASH",
+      "date": "2025/01/21",
+      "lat": 32.37308,
+      "lng": -86.32906
+    },
+    {
+      "address": "1600 OAK ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* ALL TRASH BAGS ON PORCH OF STRUCTURE ON THIS PARCEL M",
+      "date": "2025/01/07",
+      "lat": 32.37334,
+      "lng": -86.32416
+    },
+    {
+      "address": "2231 EDWARD J NETTLES LN",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH",
+      "date": "2025/01/21",
+      "lat": 32.37308,
+      "lng": -86.32885
+    },
+    {
+      "address": "2231 EDWARD J NETTLES LN",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH* CLEAN UP SITE WHERE TRAILER HAS BEEN REMOVED.",
+      "date": "2025/01/21",
+      "lat": 32.37308,
+      "lng": -86.32885
+    },
+    {
+      "address": "2229 EDWARD J NETTLES LN",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37308,
+      "lng": -86.32873
+    },
+    {
+      "address": "2016 STELLA ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, REPAIR OF MOTOR VEHICLES, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.3734,
+      "lng": -86.32464
+    },
+    {
+      "address": "2142 STELLA ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37339,
+      "lng": -86.32722
+    },
+    {
+      "address": "2152 STELLA ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37339,
+      "lng": -86.32752
+    },
+    {
+      "address": "2148 STELLA ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37339,
+      "lng": -86.32737
+    },
+    {
+      "address": "1341 OLD OAK PL",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37255,
+      "lng": -86.17183
+    },
+    {
+      "address": "LINCOLN TERR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37379,
+      "lng": -86.32559
+    },
+    {
+      "address": "LINCOLN TER",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37379,
+      "lng": -86.32583
+    },
+    {
+      "address": "5701 EAST SHIRLEY LN",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, FURNITURE, LITTER, JUNK, TRASH* REMOVE ALL TRASH, FURNITURE, HOUSEHOLD ITEMS, AND DEBRIS F",
+      "date": "2025/02/04",
+      "lat": 32.37541,
+      "lng": -86.20867
+    },
+    {
+      "address": "1401 BUNTING ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL SCATTERED DEBRIS FROM PROPERTY",
+      "date": "2025/01/21",
+      "lat": 32.37583,
+      "lng": -86.33323
+    },
+    {
+      "address": "1407 BUNTING ST *",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL SCATTERED DEBRIS ALL OVER PROPERTY",
+      "date": "2025/01/21",
+      "lat": 32.37583,
+      "lng": -86.3334
+    },
+    {
+      "address": "757 HAVELOCK LN",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* BLUE HONDA, SILVER HONDA, BLACK SUV",
+      "date": "2025/01/21",
+      "lat": 32.37934,
+      "lng": -86.2018
+    },
+    {
+      "address": "411 MAY ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL SCATTERED DEBRIS FROM PROPERTY",
+      "date": "2025/01/21",
+      "lat": 32.37584,
+      "lng": -86.3336
+    },
+    {
+      "address": "410 LORING ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.3756,
+      "lng": -86.32803
+    },
+    {
+      "address": "2120 LUVERNE ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37568,
+      "lng": -86.3276
+    },
+    {
+      "address": "2116 LUVERNE ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37568,
+      "lng": -86.32748
+    },
+    {
+      "address": "115 LONGVIEW CT",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/07",
+      "lat": 32.37424,
+      "lng": -86.35722
+    },
+    {
+      "address": "2126 LUVERNE ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37568,
+      "lng": -86.32773
+    },
+    {
+      "address": "1049 OAK ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37429,
+      "lng": -86.32368
+    },
+    {
+      "address": "3342 TEXAS ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE PILE OF DEBRIS REAR OF THE PROPERTY",
+      "date": "2025/01/21",
+      "lat": 32.38156,
+      "lng": -86.28042
+    },
+    {
+      "address": "534 ROSA L PARKS AVE",
+      "type": "NUISANCE",
+      "remarks": "* CARPET, DEBRIS, FURNITURE, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL ",
+      "date": "2025/01/21",
+      "lat": 32.37537,
+      "lng": -86.31665
+    },
+    {
+      "address": "1001 CLAY ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/07",
+      "lat": 32.37629,
+      "lng": -86.32785
+    },
+    {
+      "address": "S DICKERSON ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS* REMOVE PILE OF TREE DEBRIS REAR O",
+      "date": "2025/01/21",
+      "lat": 32.37553,
+      "lng": -86.32218
+    },
+    {
+      "address": "455 EASTDALE RD SOUTH",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, LITTER, JUNK, TRASH, TIRES, TREE LIMBS, TREE VIOLATION* REMOVE ALL TRASH ON GROUND",
+      "date": "2025/02/04",
+      "lat": 32.37591,
+      "lng": -86.20927
+    },
+    {
+      "address": "538 SOUTH DICKERSON ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37546,
+      "lng": -86.32217
+    },
+    {
+      "address": "532 SOUTH DICKERSON ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37548,
+      "lng": -86.32218
+    },
+    {
+      "address": "5952 PROVOST AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.3658,
+      "lng": -86.22812
+    },
+    {
+      "address": "NORMAN BRIDGE RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS",
+      "date": "2025/02/04",
+      "lat": 32.37108,
+      "lng": -86.29931
+    },
+    {
+      "address": "571 VIRGINIA AVE",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, TREE VIOLATION, WEEDS* REMOVE DOWN TREE FROM PRO",
+      "date": "2025/01/21",
+      "lat": 32.37519,
+      "lng": -86.31323
+    },
+    {
+      "address": "3340 ASHLEY RD",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, WOOD* THIS ENTIRE",
+      "date": "2025/01/21",
+      "lat": 32.37178,
+      "lng": -86.37153
+    },
+    {
+      "address": "1059 HERRON ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37617,
+      "lng": -86.32803
+    },
+    {
+      "address": "1251 BASSETT DR",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, AUTO PARTS, BLDG. MATERIAL, CARPET, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN ",
+      "date": "2025/01/21",
+      "lat": 32.36691,
+      "lng": -86.28489
+    },
+    {
+      "address": "56 SOUTHMONT DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS* ENTIRE PARCEL NEEDS TO BE CLEANED AND STR",
+      "date": "2025/02/04",
+      "lat": 32.36928,
+      "lng": -86.30972
+    },
+    {
+      "address": "4029 SOUTH COURT ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.36935,
+      "lng": -86.30738
+    },
+    {
+      "address": "727 CLOVER HILL DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS, WOOD",
+      "date": "2025/02/04",
+      "lat": 32.36961,
+      "lng": -86.31848
+    },
+    {
+      "address": "3089 WEST BLVD",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.36963,
+      "lng": -86.35516
+    },
+    {
+      "address": "100 DUNCAN DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, CARPET, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, TREE LIMBS, WOOD* THIS ENTIRE PARC",
+      "date": "2025/02/04",
+      "lat": 32.37236,
+      "lng": -86.31301
+    },
+    {
+      "address": "ESTATE AVE",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.36952,
+      "lng": -86.35368
+    },
+    {
+      "address": "3541 MANLEY DR",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL SCATTERED DEBRIS AND INOPER",
+      "date": "2025/01/21",
+      "lat": 32.38162,
+      "lng": -86.29034
+    },
+    {
+      "address": "3330 TEXAS ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, TREE VIOLATION, WEEDS* REMOVE PILE TREE DEBRIS F",
+      "date": "2025/02/04",
+      "lat": 32.38151,
+      "lng": -86.28042
+    },
+    {
+      "address": "ROSA L PARKS AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.37299,
+      "lng": -86.3162
+    },
+    {
+      "address": "3615 SOUTH COURT ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, LITTER, JUNK, TRASH* BUILDING MATERIAL AND WOOD ON PARCEL MUST BE REMOVED",
+      "date": "2025/01/21",
+      "lat": 32.37116,
+      "lng": -86.30753
+    },
+    {
+      "address": "2801 EAST SOUTH BLVD",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* CUT ALL THE WAY UP TO THE BLVD; BLACK ",
+      "date": "2025/01/07",
+      "lat": 32.36874,
+      "lng": -86.25413
+    },
+    {
+      "address": "3312 WOODLEY RD",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.36721,
+      "lng": -86.26472
+    },
+    {
+      "address": "2121 STELLA ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.37331,
+      "lng": -86.32661
+    },
+    {
+      "address": "2116 STELLA ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.37339,
+      "lng": -86.32648
+    },
+    {
+      "address": "857 OAK ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.37485,
+      "lng": -86.32379
+    },
+    {
+      "address": "778 ROSA L PARKS AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.37487,
+      "lng": -86.31648
+    },
+    {
+      "address": "782 ROSA L PARKS AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.37486,
+      "lng": -86.31648
+    },
+    {
+      "address": "3809 FIELDCREST DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.3696,
+      "lng": -86.25425
+    },
+    {
+      "address": "1607 SANDSTONE CT",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* THERE IS JUNK AND TRASH IN THE BACK YARD THAT NEED TO",
+      "date": "2025/01/21",
+      "lat": 32.37287,
+      "lng": -86.21224
+    },
+    {
+      "address": "613 S HOLT ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, WEEDS* CLEAR OUT AREA BESIDE BUILDING OF SCAT",
+      "date": "2025/02/04",
+      "lat": 32.37528,
+      "lng": -86.31953
+    },
+    {
+      "address": "1922 PLUM ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, TREE VIOLATION, WEEDS* ALL AT THE REAR O",
+      "date": "2025/01/21",
+      "lat": 32.37551,
+      "lng": -86.28292
+    },
+    {
+      "address": "350 POLK ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37631,
+      "lng": -86.28079
+    },
+    {
+      "address": "707 ROSA L PARKS AVE",
+      "type": "NUISANCE",
+      "remarks": "* OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.37511,
+      "lng": -86.31586
+    },
+    {
+      "address": "3143 SOUTH COURT ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS, WOOD* 1 WHITE ",
+      "date": "2025/01/21",
+      "lat": 32.37219,
+      "lng": -86.30771
+    },
+    {
+      "address": "1416 MADISON AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37697,
+      "lng": -86.28957
+    },
+    {
+      "address": "3513 MANLEY DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE THE LARGE ACCUMULATION ",
+      "date": "2025/01/21",
+      "lat": 32.38148,
+      "lng": -86.29127
+    },
+    {
+      "address": "3325 PATRICK RD",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, DEBRIS, LITTER, JUNK, TRASH* PARCEL NEEDS TO BE CLEANED AND ORGANIZED WITH VEHICLES.  ",
+      "date": "2025/02/04",
+      "lat": 32.37205,
+      "lng": -86.37084
+    },
+    {
+      "address": "2036 UPPER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37811,
+      "lng": -86.27946
+    },
+    {
+      "address": "1933 MARIE JAMES CT",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL SCATTERED BUILDING DEBRIS FROM REA",
+      "date": "2025/01/21",
+      "lat": 32.37826,
+      "lng": -86.28078
+    },
+    {
+      "address": "342 EAST EDGEMONT AVE",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS",
+      "date": "2025/02/04",
+      "lat": 32.37139,
+      "lng": -86.30255
+    },
+    {
+      "address": "427 EAST OGDEN AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS",
+      "date": "2025/02/04",
+      "lat": 32.37089,
+      "lng": -86.30005
+    },
+    {
+      "address": "1908 PLUM ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/07",
+      "lat": 32.37551,
+      "lng": -86.28342
+    },
+    {
+      "address": "3530 MILAN DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37631,
+      "lng": -86.25558
+    },
+    {
+      "address": "2545 FAIRGROUND RD",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS* REMOVE ALL SCATTERED BUILDING DEBRIS",
+      "date": "2025/01/21",
+      "lat": 32.37954,
+      "lng": -86.27594
+    },
+    {
+      "address": "1312 PAMPAS DR",
+      "type": "NUISANCE",
+      "remarks": "* TREE LIMBS, TREE STUMPS* THERE IS A PILE OF LIMBS AT THE BACK FENCE OF 1312 PAMPAS. IT HAS BEEN TH",
+      "date": "2025/02/04",
+      "lat": 32.37373,
+      "lng": -86.21319
+    },
+    {
+      "address": "1532 WINONA AVE",
+      "type": "NUISANCE",
+      "remarks": "* POOLING/PONDING OF FOUL WATER",
+      "date": "2025/01/07",
+      "lat": 32.37734,
+      "lng": -86.28807
+    },
+    {
+      "address": "104 COLISEUM BLVD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37803,
+      "lng": -86.25905
+    },
+    {
+      "address": "1209 RYAN ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/04",
+      "lat": 32.37489,
+      "lng": -86.27801
+    },
+    {
+      "address": "4017 WARE HILL DR",
+      "type": "NUISANCE",
+      "remarks": "* FURNITURE, LITTER, JUNK, TRASH* REMOVE ALL ITEMS OFF FRONT PORCH",
+      "date": "2025/01/21",
+      "lat": 32.37831,
+      "lng": -86.24705
+    },
+    {
+      "address": "1438 WITHERS ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, WEEDS* REMOVE WRECK/DISMANTLED VEHICLE FROM PROPERTY",
+      "date": "2025/01/07",
+      "lat": 32.37905,
+      "lng": -86.29871
+    },
+    {
+      "address": "1750 N DECATUR ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED DEBRIS FROM PROPERTY AND INOPERAB",
+      "date": "2025/02/04",
+      "lat": 32.37942,
+      "lng": -86.29542
+    },
+    {
+      "address": "1904 JOHNSON ST (HIGHLAND GARDENS)",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED DEBRIS ALL OVER PROPERTY INCLUDING FRONT AND REA",
+      "date": "2025/02/04",
+      "lat": 32.38005,
+      "lng": -86.28261
+    },
+    {
+      "address": "405 FEDERAL DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/01/21",
+      "lat": 32.37777,
+      "lng": -86.27417
+    },
+    {
+      "address": "3845 CHATWOOD ST",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, BLDG. MATERIAL, DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* RE",
+      "date": "2025/02/18",
+      "lat": 32.36562,
+      "lng": -86.25555
+    },
+    {
+      "address": "3109 GENTILLY CT",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36673,
+      "lng": -86.24661
+    },
+    {
+      "address": "5060 WOODLEY RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, OVERGROWN GRASS* REMOVE DOWN TREE LIMB ON FRONT AND ALL INOPERABLE VEHICLES",
+      "date": "2025/02/18",
+      "lat": 32.36339,
+      "lng": -86.23744
+    },
+    {
+      "address": "4008 AMBERLY RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH* REMOVE ALL WRECKED INOPERABLE VEHICLES, SCATTERED DEBR",
+      "date": "2025/02/18",
+      "lat": 32.36451,
+      "lng": -86.2415
+    },
+    {
+      "address": "149 SOUTH PANAMA ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* ALL AROUND DUMPSTER ALL TYPES LITTER AND JUNK",
+      "date": "2025/01/21",
+      "lat": 32.37676,
+      "lng": -86.27532
+    },
+    {
+      "address": "127 BROADWAY ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL SCATTERED DEBRIS FROM C",
+      "date": "2025/01/21",
+      "lat": 32.3821,
+      "lng": -86.28291
+    },
+    {
+      "address": "808 FEDERAL DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH",
+      "date": "2025/01/21",
+      "lat": 32.37838,
+      "lng": -86.27338
+    },
+    {
+      "address": "4412 GATEWAY DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH* REMOVE ALL INOPERABLE VEHICLES, SCATTERED DEBRIS ALONG",
+      "date": "2025/02/18",
+      "lat": 32.36622,
+      "lng": -86.37963
+    },
+    {
+      "address": "5225 WEST SHADES VALLEY DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36478,
+      "lng": -86.34268
+    },
+    {
+      "address": "5433 CATHY DR",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, TIRES, TREE LIMBS, TREE VIOLATION* BURGUNDY 4-DOOR SEDAN NEEDS TO BE REMOVED IF NOT",
+      "date": "2025/02/18",
+      "lat": 32.36401,
+      "lng": -86.34367
+    },
+    {
+      "address": "5224 GREENSBORO DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36509,
+      "lng": -86.3435
+    },
+    {
+      "address": "5256 GREENSBORO DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3652,
+      "lng": -86.3426
+    },
+    {
+      "address": "5117 EAST LINDA CIR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, FURNITURE, LITTER, JUNK, TRASH, WOOD* ITEMS DRAGGED OUT FROM BURNED HOUSE INTO BAC",
+      "date": "2025/02/18",
+      "lat": 32.36528,
+      "lng": -86.34076
+    },
+    {
+      "address": "5134 EAST LINDA CIR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36521,
+      "lng": -86.34129
+    },
+    {
+      "address": "236 SOUTHLAWN DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, TREE LIMBS, WEEDS, WOOD",
+      "date": "2025/02/18",
+      "lat": 32.36533,
+      "lng": -86.34527
+    },
+    {
+      "address": "536 UPTON RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS, WOOD",
+      "date": "2025/02/18",
+      "lat": 32.36588,
+      "lng": -86.34019
+    },
+    {
+      "address": "331 CHIPPING TER",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36602,
+      "lng": -86.34091
+    },
+    {
+      "address": "5553 EAST SHADES VALLEY DR",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, CARPET, LITTER, JUNK, TRASH",
+      "date": "2025/02/18",
+      "lat": 32.36407,
+      "lng": -86.33837
+    },
+    {
+      "address": "SOUTHLAWN DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36558,
+      "lng": -86.33469
+    },
+    {
+      "address": "5153 LEVENSON RD",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3654,
+      "lng": -86.33483
+    },
+    {
+      "address": "5101 LEVENSON RD",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, TREE VIOLATION, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36538,
+      "lng": -86.33265
+    },
+    {
+      "address": "624 GREEN LEAF DR",
+      "type": "NUISANCE",
+      "remarks": "* FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* SOFA ON CURB NEEDS TO BE REMOVED; ENTIRE Y",
+      "date": "2025/02/18",
+      "lat": 32.36535,
+      "lng": -86.33667
+    },
+    {
+      "address": "3431 DUFF ST",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS* 2 WHITE PU TRUCKS1 BLUE MUSTANG1 WHITE 4 DOOR",
+      "date": "2025/02/18",
+      "lat": 32.37099,
+      "lng": -86.36139
+    },
+    {
+      "address": "3590 YOUNG DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37046,
+      "lng": -86.34039
+    },
+    {
+      "address": "3550 YOUNG DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37077,
+      "lng": -86.34015
+    },
+    {
+      "address": "3590 YOUNG DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37047,
+      "lng": -86.34119
+    },
+    {
+      "address": "44 SOUTHMONT DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS, WOOD* ENTIRE PARC",
+      "date": "2025/02/18",
+      "lat": 32.36937,
+      "lng": -86.30948
+    },
+    {
+      "address": "FORTE LN",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37065,
+      "lng": -86.33966
+    },
+    {
+      "address": "INT US 31",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37041,
+      "lng": -86.33969
+    },
+    {
+      "address": "745 BELVEDERE DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37012,
+      "lng": -86.3187
+    },
+    {
+      "address": "757 BELVEDERE DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE STUMPS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37018,
+      "lng": -86.3187
+    },
+    {
+      "address": "40 SOUTHMONT DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, TREE LIMBS, WEEDS* THE ENTIRE",
+      "date": "2025/02/18",
+      "lat": 32.36937,
+      "lng": -86.30922
+    },
+    {
+      "address": "712 WEST APRIL ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36993,
+      "lng": -86.31777
+    },
+    {
+      "address": "744 WEST APRIL ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36993,
+      "lng": -86.3185
+    },
+    {
+      "address": "752 WEST APRIL ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36993,
+      "lng": -86.31869
+    },
+    {
+      "address": "3889 APRIL ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36993,
+      "lng": -86.31944
+    },
+    {
+      "address": "3628 APRIL ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3707,
+      "lng": -86.32074
+    },
+    {
+      "address": "900 RIDGECREST ST",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH* 1 SILVER CAR IN REAR",
+      "date": "2025/02/18",
+      "lat": 32.37086,
+      "lng": -86.32052
+    },
+    {
+      "address": "3716 GASTON AVE",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37047,
+      "lng": -86.31783
+    },
+    {
+      "address": "3627 APRIL ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, JUNK VEHICLES, LITTER, JUNK, TRASH, TREE LIMBS, WEEDS* 1 RED MUSTANG",
+      "date": "2025/02/18",
+      "lat": 32.3707,
+      "lng": -86.31994
+    },
+    {
+      "address": "130 HOBBIE DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37185,
+      "lng": -86.31512
+    },
+    {
+      "address": "112 HOBBIE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37184,
+      "lng": -86.31335
+    },
+    {
+      "address": "119 STUART ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37197,
+      "lng": -86.31521
+    },
+    {
+      "address": "132 HOBBIE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37185,
+      "lng": -86.31535
+    },
+    {
+      "address": "3221 DORIS CIR",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH* 1 BLUEISH/GREEN 4 DOOR CAR",
+      "date": "2025/02/18",
+      "lat": 32.37171,
+      "lng": -86.32096
+    },
+    {
+      "address": "3252 AGATE ST",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, TREE LIMBS, TREE VIOLATION",
+      "date": "2025/02/18",
+      "lat": 32.37163,
+      "lng": -86.32056
+    },
+    {
+      "address": "721 CAPRI ST",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH* 1 WHITE CHEVY TAHOE",
+      "date": "2025/02/18",
+      "lat": 32.37224,
+      "lng": -86.31851
+    },
+    {
+      "address": "703 UPCHURCH CIR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, WEEDS* 1 BLUE ",
+      "date": "2025/02/18",
+      "lat": 32.3717,
+      "lng": -86.31777
+    },
+    {
+      "address": "1523 OAKLAND ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37329,
+      "lng": -86.32132
+    },
+    {
+      "address": "618 WOODROW ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS* 1 RED VEHI",
+      "date": "2025/02/18",
+      "lat": 32.37342,
+      "lng": -86.31665
+    },
+    {
+      "address": "637 ERSKINE ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37295,
+      "lng": -86.31693
+    },
+    {
+      "address": "700 ALEXANDER ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3729,
+      "lng": -86.31779
+    },
+    {
+      "address": "625 ERSKINE ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37296,
+      "lng": -86.31674
+    },
+    {
+      "address": "650 MALVERN ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3728,
+      "lng": -86.31701
+    },
+    {
+      "address": "MALVERN ST",
+      "type": "NUISANCE",
+      "remarks": "",
+      "date": "2025/02/18",
+      "lat": 32.3727,
+      "lng": -86.31742
+    },
+    {
+      "address": "1461 SIERRA ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37344,
+      "lng": -86.32284
+    },
+    {
+      "address": "1936 ROSA L PARKS AV",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH",
+      "date": "2025/02/18",
+      "lat": 32.37269,
+      "lng": -86.3164
+    },
+    {
+      "address": "1534 OAKLAND ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37325,
+      "lng": -86.32177
+    },
+    {
+      "address": "SANDY ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, TREE LIMBS",
+      "date": "2025/02/18",
+      "lat": 32.37271,
+      "lng": -86.33717
+    },
+    {
+      "address": "510 ELM ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37298,
+      "lng": -86.31477
+    },
+    {
+      "address": "1617 WESTCOTT ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37313,
+      "lng": -86.32554
+    },
+    {
+      "address": "1609 WESTCOTT ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37315,
+      "lng": -86.32554
+    },
+    {
+      "address": "",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37317,
+      "lng": -86.32523
+    },
+    {
+      "address": "2456 SANDY ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH",
+      "date": "2025/02/18",
+      "lat": 32.37279,
+      "lng": -86.33655
+    },
+    {
+      "address": "2156 COUNCIL ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37324,
+      "lng": -86.32764
+    },
+    {
+      "address": "1604 WESTCOTT ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37316,
+      "lng": -86.32615
+    },
+    {
+      "address": "2127 STELLA ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37331,
+      "lng": -86.32676
+    },
+    {
+      "address": "1600 OAK ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS* ENHANCE ABETMENT",
+      "date": "2025/02/18",
+      "lat": 32.37334,
+      "lng": -86.32416
+    },
+    {
+      "address": "2138 STELLA ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37339,
+      "lng": -86.32708
+    },
+    {
+      "address": "2117 STELLA ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37331,
+      "lng": -86.32646
+    },
+    {
+      "address": "2157 DOROTHY ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37346,
+      "lng": -86.32767
+    },
+    {
+      "address": "1605 MOBILE RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37356,
+      "lng": -86.33037
+    },
+    {
+      "address": "2016 DOROTHY ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37355,
+      "lng": -86.32449
+    },
+    {
+      "address": "1615 TERMINAL RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37362,
+      "lng": -86.33149
+    },
+    {
+      "address": "EARLY ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37361,
+      "lng": -86.32667
+    },
+    {
+      "address": "DOROTHY ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37355,
+      "lng": -86.32464
+    },
+    {
+      "address": "1308 MOBILE RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37397,
+      "lng": -86.32749
+    },
+    {
+      "address": "1317 MOBILE RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37391,
+      "lng": -86.32738
+    },
+    {
+      "address": "1321 MOBILE RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3739,
+      "lng": -86.3275
+    },
+    {
+      "address": "1332 MOBILE RD",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, TREE LIMBS",
+      "date": "2025/02/18",
+      "lat": 32.37395,
+      "lng": -86.32776
+    },
+    {
+      "address": "1313 MOBILE RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37392,
+      "lng": -86.32729
+    },
+    {
+      "address": "968 OAK ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37457,
+      "lng": -86.32438
+    },
+    {
+      "address": "2058 CLIO ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37439,
+      "lng": -86.32591
+    },
+    {
+      "address": "1018 OAK ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37442,
+      "lng": -86.32435
+    },
+    {
+      "address": "OAK ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37456,
+      "lng": -86.32438
+    },
+    {
+      "address": "938 ERATO ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37439,
+      "lng": -86.32621
+    },
+    {
+      "address": "930 ERATO ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3744,
+      "lng": -86.32621
+    },
+    {
+      "address": "859 LUCY ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37487,
+      "lng": -86.32508
+    },
+    {
+      "address": "2107 WEST FRED D GRAY AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37475,
+      "lng": -86.32564
+    },
+    {
+      "address": "855 LUCY ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37489,
+      "lng": -86.32511
+    },
+    {
+      "address": "858 LUCY ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37488,
+      "lng": -86.32561
+    },
+    {
+      "address": "851 LUCY ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37491,
+      "lng": -86.32511
+    },
+    {
+      "address": "862 LUCY ST",
+      "type": "NUISANCE",
+      "remarks": "* CARPET, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, TREE LIMBS, WEEDS, WOOD",
+      "date": "2025/02/18",
+      "lat": 32.37486,
+      "lng": -86.32561
+    },
+    {
+      "address": "845 LUCY ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37493,
+      "lng": -86.32512
+    },
+    {
+      "address": "560 GREYHOUND ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE VIOLATION, WEEDS* TREE DOWN WREC",
+      "date": "2025/02/18",
+      "lat": 32.37545,
+      "lng": -86.32709
+    },
+    {
+      "address": "566 GREYHOUND ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, FURNITURE, LITTER, JUNK, TRASH* REMOVE THE INTERIOR FURNITURE OFF THE FRONT PORCH AND PICK",
+      "date": "2025/02/18",
+      "lat": 32.37543,
+      "lng": -86.32709
+    },
+    {
+      "address": "330 MEEHAN ST",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, OVERGROWN GRASS, TREE LIMBS, WEEDS* 1 BLACK CHEVY TAHOE",
+      "date": "2025/02/18",
+      "lat": 32.37435,
+      "lng": -86.31509
+    },
+    {
+      "address": "920 BELVIEW ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, TREE VIOLATION, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37451,
+      "lng": -86.31436
+    },
+    {
+      "address": "250 COLUMBIA AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH",
+      "date": "2025/02/18",
+      "lat": 32.37449,
+      "lng": -86.314
+    },
+    {
+      "address": "924 BELVIEW ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37449,
+      "lng": -86.31435
+    },
+    {
+      "address": "332 COLUMBIA AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL EXCESSIVE OVERGROWTH",
+      "date": "2025/02/18",
+      "lat": 32.37449,
+      "lng": -86.31496
+    },
+    {
+      "address": "336 COLUMBIA AVE",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37449,
+      "lng": -86.31504
+    },
+    {
+      "address": "344 COLUMBIA AVE",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE PILE OF TREE LIMBS AND DEBRIS FROM CURB",
+      "date": "2025/02/18",
+      "lat": 32.37449,
+      "lng": -86.31519
+    },
+    {
+      "address": "1037 MILL ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37417,
+      "lng": -86.32363
+    },
+    {
+      "address": "410 COLUMBIA AVE",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE EXCESSIVE OVERGROWTH NEAR CURB",
+      "date": "2025/02/18",
+      "lat": 32.37448,
+      "lng": -86.31554
+    },
+    {
+      "address": "703 MILL ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37419,
+      "lng": -86.31899
+    },
+    {
+      "address": "635 MORGAN AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* TRAILER WITHOUT WHEELS AND PILE BEHIND BUILDING.",
+      "date": "2025/02/18",
+      "lat": 32.37494,
+      "lng": -86.31449
+    },
+    {
+      "address": "644 VIRGINIA AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37489,
+      "lng": -86.31381
+    },
+    {
+      "address": "647 VIRGINIA AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37487,
+      "lng": -86.3132
+    },
+    {
+      "address": "3112 SHELDON LN",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, WEEDS* REMOVE THE ACCUMULATION OF",
+      "date": "2025/02/18",
+      "lat": 32.37367,
+      "lng": -86.37033
+    },
+    {
+      "address": "29 LORAINE ST",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE WRECKED INOPERABLE VEHICLE ALON",
+      "date": "2025/02/18",
+      "lat": 32.37435,
+      "lng": -86.36441
+    },
+    {
+      "address": "BIRMINGHAM HWY",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37794,
+      "lng": -86.37827
+    },
+    {
+      "address": "4028 BIRMINGHAM HWY",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37846,
+      "lng": -86.38197
+    },
+    {
+      "address": "4032 BIRMINGHAM HWY",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3785,
+      "lng": -86.38211
+    },
+    {
+      "address": "0 BIRMINGHAM HWY",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, CARPET, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37792,
+      "lng": -86.38043
+    },
+    {
+      "address": "1315 MAXWELL BLVD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS, WOOD",
+      "date": "2025/02/18",
+      "lat": 32.37641,
+      "lng": -86.33228
+    },
+    {
+      "address": "22 DAVIS DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS",
+      "date": "2025/02/18",
+      "lat": 32.36884,
+      "lng": -86.30556
+    },
+    {
+      "address": "1323 MAXWELL BLVD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3764,
+      "lng": -86.33252
+    },
+    {
+      "address": "3160 BIRMINGHAM HWY",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37564,
+      "lng": -86.3696
+    },
+    {
+      "address": "1919 BELL ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS, WOOD",
+      "date": "2025/02/18",
+      "lat": 32.37608,
+      "lng": -86.33919
+    },
+    {
+      "address": "9 DAVIS DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36894,
+      "lng": -86.30638
+    },
+    {
+      "address": "2615 E SOUTH BLVD",
+      "type": "NUISANCE",
+      "remarks": "* JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS* GREY BURNED CAR GREY CAR TAN SUV TAN CAR",
+      "date": "2025/02/18",
+      "lat": 32.36883,
+      "lng": -86.25705
+    },
+    {
+      "address": "2304 OVERHILL RD",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED DEBRIS OVER ENTIRE P",
+      "date": "2025/02/18",
+      "lat": 32.36792,
+      "lng": -86.27195
+    },
+    {
+      "address": "3218 BRAEBURN RD",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36766,
+      "lng": -86.26382
+    },
+    {
+      "address": "1230 GREGORY AVE",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37037,
+      "lng": -86.28675
+    },
+    {
+      "address": "2719 WOODLEY RD",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.36969,
+      "lng": -86.27125
+    },
+    {
+      "address": "3444 NARROW LANE RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, TREE LIMBS, TREE STUMPS, TREE VIOLATION, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37097,
+      "lng": -86.28392
+    },
+    {
+      "address": "1280 EASTERN BLVD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37395,
+      "lng": -86.21972
+    },
+    {
+      "address": "3466 FERNWAY DR",
+      "type": "NUISANCE",
+      "remarks": "* LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37058,
+      "lng": -86.25203
+    },
+    {
+      "address": "2023 REXFORD RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, FURNITURE* REMOVE DEBRIS/FURNITURE FROM REAR OF THE PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.37087,
+      "lng": -86.22122
+    },
+    {
+      "address": "1104 EAST FAIRVIEW AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL THE SCATTERED DEBRIS FROM PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.37254,
+      "lng": -86.29086
+    },
+    {
+      "address": "1100 EAST FAIRVIEW AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE DOWNED TREE CUT BACK OV",
+      "date": "2025/02/18",
+      "lat": 32.37254,
+      "lng": -86.29105
+    },
+    {
+      "address": "2057 COMMODORE ST",
+      "type": "NUISANCE",
+      "remarks": "* TREE LIMBS, TREE VIOLATION",
+      "date": "2025/02/18",
+      "lat": 32.37319,
+      "lng": -86.27605
+    },
+    {
+      "address": "1507 DUNBAR ST",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, JUNK VEHICLES, LITTER, JUNK, TRASH* GRAY CHEVY SILVERADO, SILVER HONDA ACCORD, BURGUND",
+      "date": "2025/02/18",
+      "lat": 32.37391,
+      "lng": -86.29301
+    },
+    {
+      "address": "2342 EAST FOURTH ST (OP)",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37411,
+      "lng": -86.27761
+    },
+    {
+      "address": "1924 TALBOT TER",
+      "type": "NUISANCE",
+      "remarks": "* TIRES* THERE IS DEBRIS AND TIRS IN THE FRONT YARD.",
+      "date": "2025/02/18",
+      "lat": 32.37184,
+      "lng": -86.24358
+    },
+    {
+      "address": "621 ANN ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37593,
+      "lng": -86.27216
+    },
+    {
+      "address": "2403 EAST FOURTH ST (OP)",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37418,
+      "lng": -86.27723
+    },
+    {
+      "address": "1701 OWENS ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37428,
+      "lng": -86.27721
+    },
+    {
+      "address": "2300 EAST THIRD ST (OP)",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37427,
+      "lng": -86.27901
+    },
+    {
+      "address": "2137 EAST THIRD ST (OP)",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37435,
+      "lng": -86.28132
+    },
+    {
+      "address": "2315 EAST FOURTH ST (OP)",
+      "type": "NUISANCE",
+      "remarks": "* OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3742,
+      "lng": -86.27838
+    },
+    {
+      "address": "2125 EAST THIRD ST (OP)",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37435,
+      "lng": -86.28179
+    },
+    {
+      "address": "2231 EAST SECOND ST (OP)",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37451,
+      "lng": -86.27949
+    },
+    {
+      "address": "2316 CHESTNUT ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37489,
+      "lng": -86.27971
+    },
+    {
+      "address": "1114 BUFORD ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37501,
+      "lng": -86.28067
+    },
+    {
+      "address": "2323 CHESTNUT ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37498,
+      "lng": -86.27948
+    },
+    {
+      "address": "2517 CHESTNUT ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37498,
+      "lng": -86.2776
+    },
+    {
+      "address": "2530 POPLAR ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37505,
+      "lng": -86.27699
+    },
+    {
+      "address": "1027 CHARLES ST (OP)",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37514,
+      "lng": -86.2763
+    },
+    {
+      "address": "2523 POPLAR ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37514,
+      "lng": -86.2773
+    },
+    {
+      "address": "2304 LOCUST ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.3752,
+      "lng": -86.279
+    },
+    {
+      "address": "1006 BUFORD ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37519,
+      "lng": -86.28076
+    },
+    {
+      "address": "1002 BUFORD ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37521,
+      "lng": -86.28077
+    },
+    {
+      "address": "2031 LOCUST ST",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, TREE LIMBS, TREE VIOLATION, W",
+      "date": "2025/02/18",
+      "lat": 32.37528,
+      "lng": -86.28173
+    },
+    {
+      "address": "929 BOYCE ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, TIRES, TREE LIMBS, WEEDS",
+      "date": "2025/02/18",
+      "lat": 32.37526,
+      "lng": -86.28235
+    },
+    {
+      "address": "1728 MT MEIGS RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* ALL AT BACK OF BUILDING ALL NEEDS TO BE CLEANED UP.",
+      "date": "2025/02/18",
+      "lat": 32.37629,
+      "lng": -86.2843
+    },
+    {
+      "address": "845 CLAUDETTE COLVIN DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* REMOVE ALL SCATTERED DEBRIS FR",
+      "date": "2025/02/18",
+      "lat": 32.37865,
+      "lng": -86.28077
+    },
+    {
+      "address": "324 BOYCE ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* CUT ALL THE WAY TO THE BACK OF THE LOT ALSO A",
+      "date": "2025/02/18",
+      "lat": 32.37623,
+      "lng": -86.28412
+    },
+    {
+      "address": "3619 PLEASANT RIDGE RD",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, BLDG. MATERIAL, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, WEEDS* FRONT AND BACK",
+      "date": "2025/02/18",
+      "lat": 32.37692,
+      "lng": -86.25771
+    },
+    {
+      "address": "1976 JOHNSON ST (HIGHLAND GARDENS)",
+      "type": "NUISANCE",
+      "remarks": "* CARPET, DEBRIS, FURNITURE, OVERGROWN GRASS, WEEDS* REMOVE ALL SCATTERED DEBRIS FROM PROPERTY INCLU",
+      "date": "2025/02/18",
+      "lat": 32.38015,
+      "lng": -86.27999
+    },
+    {
+      "address": "3250 WILLOW LANE DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH* ALL IN THE BACK YARD",
+      "date": "2025/02/18",
+      "lat": 32.37705,
+      "lng": -86.26455
+    },
+    {
+      "address": "3309 COTTONWOOD DR",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, DEBRIS, FURNITURE, LITTER, JUNK, TRASH* ALL IN FRONT YARD",
+      "date": "2025/02/18",
+      "lat": 32.37716,
+      "lng": -86.26104
+    },
+    {
+      "address": "203 DUNN DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, WOOD",
+      "date": "2025/02/18",
+      "lat": 32.37686,
+      "lng": -86.27044
+    },
+    {
+      "address": "211 OAK FOREST DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH",
+      "date": "2025/02/18",
+      "lat": 32.37631,
+      "lng": -86.26765
+    },
+    {
+      "address": "212 DUNN DR",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, DEBRIS, FURNITURE, LITTER, JUNK, TRASH",
+      "date": "2025/02/18",
+      "lat": 32.37672,
+      "lng": -86.27091
+    },
+    {
+      "address": "118 BRADLEY DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH",
+      "date": "2025/02/18",
+      "lat": 32.37669,
+      "lng": -86.26975
+    },
+    {
+      "address": "962 HANOVER DR",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, BLDG. MATERIAL, CARPET, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN GRASS, TREE ",
+      "date": "2025/02/18",
+      "lat": 32.38041,
+      "lng": -86.26474
+    },
+    {
+      "address": "3062 PINEHILL RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH",
+      "date": "2025/02/18",
+      "lat": 32.37919,
+      "lng": -86.26241
+    },
+    {
+      "address": "526 WAKEFIELD DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, LITTER, JUNK, TRASH, TIRES",
+      "date": "2025/02/18",
+      "lat": 32.37889,
+      "lng": -86.24319
+    },
+    {
+      "address": "5904 CARMEL DR",
+      "type": "NUISANCE",
+      "remarks": "* AUTO PARTS, JUNK VEHICLES* RED CAR",
+      "date": "2025/02/18",
+      "lat": 32.37651,
+      "lng": -86.208
+    },
+    {
+      "address": "2553 LOWER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* REMOVE ANY OVERSIZED DEBRIS FROM DUMPSTER AREA",
+      "date": "2025/02/18",
+      "lat": 32.38149,
+      "lng": -86.28936
+    },
+    {
+      "address": "2833 CREATIVE ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED DEBRIS FROM ALL OVER PROPERTY INCLUDING FRONT, S",
+      "date": "2025/02/18",
+      "lat": 32.38235,
+      "lng": -86.28558
+    },
+    {
+      "address": "1212 PONDCYPRESS DR",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, AUTO PARTS, BLDG. MATERIAL, CARPET, DEBRIS, FURNITURE, LITTER, JUNK, TRASH, OVERGROWN ",
+      "date": "2025/02/18",
+      "lat": 32.38242,
+      "lng": -86.2001
+    },
+    {
+      "address": "44 GARDEN ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED DEBRIS INCLUDING TENT FROM FRONT PORCH/PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.38276,
+      "lng": -86.28989
+    },
+    {
+      "address": "1018 TIMBER GAP CROSSING",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS",
+      "date": "2025/02/18",
+      "lat": 32.36782,
+      "lng": -86.14331
+    },
+    {
+      "address": "2217 BRIAR GATE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, FURNITURE, LITTER, JUNK, TRASH* REMOVE DEBRIS/BUILDING MATERIALS FROM CURB/CALL 334-625-27",
+      "date": "2025/02/18",
+      "lat": 32.36942,
+      "lng": -86.20508
+    },
+    {
+      "address": "314 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED DEBRIS FROM ALL OVER PROPERTY INCLUDING REAR FRO",
+      "date": "2025/02/18",
+      "lat": 32.38232,
+      "lng": -86.28034
+    },
+    {
+      "address": "318 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED DEBRIS FROM PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.38232,
+      "lng": -86.28015
+    },
+    {
+      "address": "322 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* BLDG. MATERIAL, DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH* REMOVE DEBRIS FROM THE SIDES OF THE ST",
+      "date": "2025/02/18",
+      "lat": 32.38232,
+      "lng": -86.27997
+    },
+    {
+      "address": "355 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, DEBRIS, JUNK VEHICLES* REMOVE APPLIANCE FROM REAR PROPERTY. SEDAN DRIVEWAY",
+      "date": "2025/02/18",
+      "lat": 32.3824,
+      "lng": -86.2785
+    },
+    {
+      "address": "307 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED FROM THE FRONT PORCH AREA 2 SEDAN",
+      "date": "2025/02/18",
+      "lat": 32.38239,
+      "lng": -86.28069
+    },
+    {
+      "address": "334 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, TIRES* REMOVE ALL SCATTERED DEBRIS/TIRES FROM PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.38232,
+      "lng": -86.27941
+    },
+    {
+      "address": "423 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, TREE LIMBS* REMOVE FALLEN/DOWNED TREE LIMBS FROM PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.38241,
+      "lng": -86.27721
+    },
+    {
+      "address": "459 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, TREE VIOLATION* REMOVE DOWN TREE LIMBS FROM REAR OF PROPERTY AND BUIL",
+      "date": "2025/02/18",
+      "lat": 32.38244,
+      "lng": -86.27573
+    },
+    {
+      "address": "221 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* OVERGROWN GRASS* CUT/CLEAN ALONG FENCE AND ON PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.38239,
+      "lng": -86.28217
+    },
+    {
+      "address": "241 GARDENDALE DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH, TREE LIMBS* REMOVE DEBRIS FROM CURB/CALL SANITATION 3346252751 FOR PI",
+      "date": "2025/02/18",
+      "lat": 32.38239,
+      "lng": -86.2814
+    },
+    {
+      "address": "2101 LOWER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* ABANDONED/OBSOLETE SIGN",
+      "date": "2025/02/04",
+      "lat": 32.37978,
+      "lng": -86.29194
+    },
+    {
+      "address": "4058 KEATING DR",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH* REMOVE WRECKED/INOPERABLE VEHICLE FROM REAR PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.3828,
+      "lng": -86.27699
+    },
+    {
+      "address": "4028 KEATING DR",
+      "type": "NUISANCE",
+      "remarks": "* APPLIANCES, DEBRIS, JUNK VEHICLES, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED DEBRIS FROM REAR PROP",
+      "date": "2025/02/18",
+      "lat": 32.38266,
+      "lng": -86.27698
+    },
+    {
+      "address": "2520 LOWER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* ABANDONED/OBSOLETE SIGN",
+      "date": "2025/02/18",
+      "lat": 32.38131,
+      "lng": -86.28883
+    },
+    {
+      "address": "2421 LOWER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* ABANDONED/OBSOLETE SIGN* 2 SIGNS",
+      "date": "2025/02/04",
+      "lat": 32.3809,
+      "lng": -86.29088
+    },
+    {
+      "address": "2435 LOWER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* ABANDONED/OBSOLETE SIGN",
+      "date": "2025/02/18",
+      "lat": 32.38095,
+      "lng": -86.29084
+    },
+    {
+      "address": "118 ROTARY ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED FROM FRONT AND REAR PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.3831,
+      "lng": -86.28207
+    },
+    {
+      "address": "2807 LOWER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* ABANDONED/OBSOLETE SIGN",
+      "date": "2025/02/04",
+      "lat": 32.3824,
+      "lng": -86.28699
+    },
+    {
+      "address": "1331 EASTERN BLVD",
+      "type": "NUISANCE",
+      "remarks": "* ABANDONED/OBSOLETE SIGN, WEEDS* POLE STRUCTURE",
+      "date": "2025/02/04",
+      "lat": 32.37355,
+      "lng": -86.21874
+    },
+    {
+      "address": "2915 LOWER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* ABANDONED/OBSOLETE SIGN",
+      "date": "2025/02/04",
+      "lat": 32.38258,
+      "lng": -86.28663
+    },
+    {
+      "address": "27 MICHIGAN AVE",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED FROM PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.38295,
+      "lng": -86.28851
+    },
+    {
+      "address": "2451 LOWER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* ABANDONED/OBSOLETE SIGN",
+      "date": "2025/02/18",
+      "lat": 32.38104,
+      "lng": -86.2905
+    },
+    {
+      "address": "32 MICHIGAN AV",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, OVERGROWN GRASS* REMOVE ALL SCATTERED DEBRIS",
+      "date": "2025/02/18",
+      "lat": 32.38304,
+      "lng": -86.28892
+    },
+    {
+      "address": "2481 LOWER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* ABANDONED/OBSOLETE SIGN* BILLBOARD SIGN",
+      "date": "2025/02/18",
+      "lat": 32.38115,
+      "lng": -86.29022
+    },
+    {
+      "address": "3401 LOWER WETUMPKA RD",
+      "type": "NUISANCE",
+      "remarks": "* ABANDONED/OBSOLETE SIGN",
+      "date": "2025/02/04",
+      "lat": 32.38341,
+      "lng": -86.28605
+    },
+    {
+      "address": "55 PICKETT ST",
+      "type": "NUISANCE",
+      "remarks": "* DEBRIS, LITTER, JUNK, TRASH* REMOVE ALL SCATTERED DEBRIS INCLUDING TENT FROM PROPERTY",
+      "date": "2025/02/18",
+      "lat": 32.38313,
+      "lng": -86.2904
+    }
+  ],
+  "food_all": [
+    {
+      "name": "129 Coosa Street Banquet Facility",
+      "address": "129 Coosa Street",
+      "score": 98,
+      "date": "2025/06/18",
+      "lat": 32.377,
+      "lng": -86.31,
+      "risk": "LOW"
+    },
+    {
+      "name": "231 Fuel Stop",
+      "address": "7249 Troy Highway",
+      "score": 95,
+      "date": "2025/07/28",
+      "lat": 32.35797,
+      "lng": -86.1629,
+      "risk": "LOW"
+    },
+    {
+      "name": "2211 The Ultimate Play Zone",
+      "address": "3541 McGehee Road",
+      "score": 98,
+      "date": "2025/06/13",
+      "lat": 32.36912,
+      "lng": -86.24545,
+      "risk": "LOW"
+    },
+    {
+      "name": "2 A Fitness",
+      "address": "3705 Easten Boulevard",
+      "score": 99,
+      "date": "2025/06/13",
+      "lat": 32.36889,
+      "lng": -86.23497,
+      "risk": "LOW"
+    },
+    {
+      "name": "31 Market",
+      "address": "18354 US Highway 31 South",
+      "score": 99,
+      "date": "2025/04/23",
+      "lat": 32.33585,
+      "lng": -86.39626,
+      "risk": "LOW"
+    },
+    {
+      "name": "1026 BLVD INC",
+      "address": "1030 West South Boulevard",
+      "score": 93,
+      "date": "2025/11/24",
+      "lat": 32.3689,
+      "lng": -86.33579,
+      "risk": "LOW"
+    },
+    {
+      "name": "4-way Stop Inc",
+      "address": "1408 Mobile Road",
+      "score": 95,
+      "date": "2025/08/13",
+      "lat": 32.37389,
+      "lng": -86.32826,
+      "risk": "LOW"
+    },
+    {
+      "name": "31 PaceCar",
+      "address": "7120 Mobile Highway",
+      "score": 91,
+      "date": "2025/11/06",
+      "lat": 32.36099,
+      "lng": -86.35218,
+      "risk": "LOW"
+    },
+    {
+      "name": "7 Brew Drive-Thru Coffee",
+      "address": "2777 Zelda Road",
+      "score": 94,
+      "date": "2025/10/23",
+      "lat": 32.37416,
+      "lng": -86.26741,
+      "risk": "LOW"
+    },
+    {
+      "name": "5 Points Deli & Grill",
+      "address": "1010 East Fairview Avenue",
+      "score": 93,
+      "date": "2025/10/08",
+      "lat": 32.37256,
+      "lng": -86.29187,
+      "risk": "LOW"
+    },
+    {
+      "name": "8 Ball Billiards",
+      "address": "163 Unit B Eastern Boulevard",
+      "score": 92,
+      "date": "2025/06/27",
+      "lat": 32.3768,
+      "lng": -86.21152,
+      "risk": "LOW"
+    },
+    {
+      "name": "8 Eleven Grille",
+      "address": "2950 East South Blvd",
+      "score": 91,
+      "date": "2025/08/13",
+      "lat": 32.36858,
+      "lng": -86.24912,
+      "risk": "LOW"
+    },
+    {
+      "name": "A and B Cell",
+      "address": "2817 Lower Wetumpka Road",
+      "score": 97,
+      "date": "2025/02/11",
+      "lat": 32.38241,
+      "lng": -86.28706,
+      "risk": "LOW"
+    },
+    {
+      "name": "A & M Soulfood",
+      "address": "2530 East South Boulevard",
+      "score": 96,
+      "date": "2025/06/18",
+      "lat": 32.36857,
+      "lng": -86.2592,
+      "risk": "LOW"
+    },
+    {
+      "name": "7 Brew Drive-Thru Coffee",
+      "address": "7913 Vaughn Road",
+      "score": 94,
+      "date": "2025/07/25",
+      "lat": 32.3705,
+      "lng": -86.1834,
+      "risk": "LOW"
+    },
+    {
+      "name": "Activity Center",
+      "address": "201 Dexter Avenue",
+      "score": 96,
+      "date": "2025/07/16",
+      "lat": 32.37661,
+      "lng": -86.30571,
+      "risk": "LOW"
+    },
+    {
+      "name": "7 Sisters Catering",
+      "address": "3833 South Court Street",
+      "score": 98,
+      "date": "2025/05/08",
+      "lat": 32.37011,
+      "lng": -86.30714,
+      "risk": "LOW"
+    },
+    {
+      "name": "ADA Marathon",
+      "address": "17451 US Highway 331",
+      "score": 94,
+      "date": "2025/08/25",
+      "lat": 32.33336,
+      "lng": -86.27873,
+      "risk": "LOW"
+    },
+    {
+      "name": "Adventist Book Center",
+      "address": "10633 Atlanta Highway",
+      "score": 99,
+      "date": "2025/07/01",
+      "lat": 32.3752,
+      "lng": -86.12687,
+      "risk": "LOW"
+    },
+    {
+      "name": "AFC Sushi @ Publix # 1024",
+      "address": "7076 Atlanta Highway",
+      "score": 99,
+      "date": "2025/11/20",
+      "lat": 32.37711,
+      "lng": -86.17787,
+      "risk": "LOW"
+    },
+    {
+      "name": "AFC Sushi @ Publix # 1025",
+      "address": "4045 Atlanta Highway",
+      "score": 99,
+      "date": "2025/06/20",
+      "lat": 32.37747,
+      "lng": -86.24471,
+      "risk": "LOW"
+    },
+    {
+      "name": "AFC Sushi @ Publix # 1026",
+      "address": "7700 Vaughn Road",
+      "score": 100,
+      "date": "2025/10/06",
+      "lat": 32.37016,
+      "lng": -86.18867,
+      "risk": "LOW"
+    },
+    {
+      "name": "AFC Sushi @ Publix # 1027",
+      "address": "3026 Zelda Road",
+      "score": 100,
+      "date": "2025/04/17",
+      "lat": 32.3731,
+      "lng": -86.26759,
+      "risk": "LOW"
+    },
+    {
+      "name": "AFC Sushi @ Publix # 1756",
+      "address": "9515 Vaughn Road",
+      "score": 98,
+      "date": "2025/10/20",
+      "lat": 32.37206,
+      "lng": -86.10365,
+      "risk": "LOW"
+    },
+    {
+      "name": "AFC Sushi @ Baptist Medical Center - South",
+      "address": "2105 East South Boulevard",
+      "score": 91,
+      "date": "2025/09/09",
+      "lat": 32.36875,
+      "lng": -86.27883,
+      "risk": "LOW"
+    },
+    {
+      "name": "AIM Academy",
+      "address": "530 Antioch Lane",
+      "score": 94,
+      "date": "2025/09/23",
+      "lat": 32.37292,
+      "lng": -86.10819,
+      "risk": "LOW"
+    },
+    {
+      "name": "Agape Child Development Center",
+      "address": "2640 Westgate Street",
+      "score": 99,
+      "date": "2025/10/17",
+      "lat": 32.37122,
+      "lng": -86.33668,
+      "risk": "LOW"
+    },
+    {
+      "name": "Airport Hampton Inn",
+      "address": "60 Wasden Road",
+      "score": 92,
+      "date": "2025/07/22",
+      "lat": 32.35985,
+      "lng": -86.35603,
+      "risk": "LOW"
+    },
+    {
+      "name": "Airbase 755 Inc",
+      "address": "755 Airbase Boulevard",
+      "score": 90,
+      "date": "2025/10/24",
+      "lat": 32.37381,
+      "lng": -86.34459,
+      "risk": "LOW"
+    },
+    {
+      "name": "Air-Tec",
+      "address": "3562 Day Street",
+      "score": 87,
+      "date": "2025/04/14",
+      "lat": 32.37535,
+      "lng": -86.34393,
+      "risk": "LOW"
+    },
+    {
+      "name": "Aka Japanese Restaurant",
+      "address": "8169 Vaughn Road",
+      "score": 99,
+      "date": "2025/06/17",
+      "lat": 32.37052,
+      "lng": -86.17735,
+      "risk": "LOW"
+    },
+    {
+      "name": "AL Wings",
+      "address": "5376 Atlanta Highway",
+      "score": 92,
+      "date": "2025/09/04",
+      "lat": 32.37712,
+      "lng": -86.22011,
+      "risk": "LOW"
+    },
+    {
+      "name": "Ala Thai",
+      "address": "6663 Atlanta Highway",
+      "score": 98,
+      "date": "2025/09/10",
+      "lat": 32.3776,
+      "lng": -86.18695,
+      "risk": "LOW"
+    },
+    {
+      "name": "Alanna's Gourmet",
+      "address": "142 W Fred Gray Avenue",
+      "score": 100,
+      "date": "2025/09/29",
+      "lat": 32.37484,
+      "lng": -86.31116,
+      "risk": "LOW"
+    },
+    {
+      "name": "Alabama Christian Academy",
+      "address": "4700 Wares Ferry Road",
+      "score": 97,
+      "date": "2025/08/20",
+      "lat": 32.37822,
+      "lng": -86.22227,
+      "risk": "LOW"
+    },
+    {
+      "name": "Alcazar Shriner Center",
+      "address": "555 Eastern Boulevard",
+      "score": 95,
+      "date": "2025/09/19",
+      "lat": 32.37567,
+      "lng": -86.2115,
+      "risk": "LOW"
+    },
+    {
+      "name": "Aldi #05",
+      "address": "1568 Eastern Boulevard",
+      "score": 97,
+      "date": "2025/02/18",
+      "lat": 32.37323,
+      "lng": -86.22345,
+      "risk": "LOW"
+    },
+    {
+      "name": "Aletheia House",
+      "address": "1155 Air Base Boulevard",
+      "score": 96,
+      "date": "2025/06/20",
+      "lat": 32.37269,
+      "lng": -86.33873,
+      "risk": "LOW"
+    },
+    {
+      "name": "Aldi #09",
+      "address": "7340 Eastchase Parkway",
+      "score": 95,
+      "date": "2025/11/03",
+      "lat": 32.37372,
+      "lng": -86.17053,
+      "risk": "LOW"
+    },
+    {
+      "name": "ALFA Cafeteria",
+      "address": "2108 East South Boulevard",
+      "score": 95,
+      "date": "2025/08/19",
+      "lat": 32.36849,
+      "lng": -86.27883,
+      "risk": "LOW"
+    },
+    {
+      "name": "ALFA Child Development Center",
+      "address": "2120 East South Boulevard",
+      "score": 99,
+      "date": "2025/06/04",
+      "lat": 32.3684,
+      "lng": -86.27728,
+      "risk": "LOW"
+    },
+    {
+      "name": "Alley Station Events",
+      "address": "130 Commerce Street",
+      "score": 99,
+      "date": "2025/05/20",
+      "lat": 32.37693,
+      "lng": -86.31034,
+      "risk": "LOW"
+    },
+    {
+      "name": "All About Kidz",
+      "address": "3305 Harrison Road",
+      "score": 99,
+      "date": "2025/07/08",
+      "lat": 32.37497,
+      "lng": -86.25891,
+      "risk": "LOW"
+    },
+    {
+      "name": "Alpha Omega Learning Center",
+      "address": "1562 Ann Street",
+      "score": 95,
+      "date": "2025/10/07",
+      "lat": 32.37411,
+      "lng": -86.27311,
+      "risk": "LOW"
+    },
+    {
+      "name": "Alley Station Warehouse",
+      "address": "130 Commerce Street, Suite 800",
+      "score": 99,
+      "date": "2025/05/20",
+      "lat": 32.37693,
+      "lng": -86.31034,
+      "risk": "LOW"
+    },
+    {
+      "name": "AMC Festival Plaza 16 Main",
+      "address": "7925 Vaughn Road",
+      "score": 95,
+      "date": "2025/10/22",
+      "lat": 32.37077,
+      "lng": -86.18363,
+      "risk": "LOW"
+    },
+    {
+      "name": "Ameri Foods",
+      "address": "23192 Troy Highway",
+      "score": 97,
+      "date": "2025/09/15",
+      "lat": 32.32547,
+      "lng": -86.05749,
+      "risk": "LOW"
+    },
+    {
+      "name": "Alexander Cold Treats",
+      "address": "3750 Norman Bridge Road",
+      "score": 97,
+      "date": "2025/07/22",
+      "lat": 32.36939,
+      "lng": -86.2999,
+      "risk": "LOW"
+    },
+    {
+      "name": "Amazing Kids Academy",
+      "address": "1125 East South Boulevard",
+      "score": 97,
+      "date": "2025/07/15",
+      "lat": 32.36869,
+      "lng": -86.28982,
+      "risk": "LOW"
+    },
+    {
+      "name": "American Deli",
+      "address": "6611 Atlanta Highway",
+      "score": 85,
+      "date": "2025/05/21",
+      "lat": 32.37737,
+      "lng": -86.18707,
+      "risk": "LOW"
+    }
+  ],
+  "live_api_endpoints": {
+    "911_calls_live": "https://services7.arcgis.com/xNUwUjOJqYE54USz/ArcGIS/rest/services/911_Calls_Data/FeatureServer/layers",
+    "fire_rescue": "https://services7.arcgis.com/xNUwUjOJqYE54USz/arcgis/rest/services/Fire_Rescue_All_Incidents/FeatureServer/0",
+    "service_311": "https://mgmgis.montgomeryal.gov/arcgis/rest/services/HostedDatasets/Received_311_Service_Request/FeatureServer/0",
+    "visitors_origin": "https://services7.arcgis.com/xNUwUjOJqYE54USz/arcgis/rest/services/Visitors_Origin/FeatureServer/0",
+    "most_visited": "https://services7.arcgis.com/xNUwUjOJqYE54USz/arcgis/rest/services/Most_Visited_Locations/FeatureServer/0"
+  }
+}
