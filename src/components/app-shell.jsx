@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react"
-import { Link, useLocation, Outlet } from "react-router-dom"
+import { Link, useLocation, Outlet, useNavigate } from "react-router-dom"
 import { cn } from "@/lib/utils"
 import { MapBackground } from "@/components/map-background"
 import { OnboardingModal } from "@/components/onboarding-modal"
@@ -16,7 +16,8 @@ import {
     Info,
     Shield,
     HelpCircle,
-    PanelLeft
+    PanelLeft,
+    X
 } from "lucide-react"
  
 const ONBOARDING_KEY = "saferoute_onboarded"
@@ -47,19 +48,38 @@ const mobileNavItems = [
  
 export function AppShell() {
     const { pathname } = useLocation()
+    const navigate = useNavigate()
     const { sharedMapRef } = useSafety()
     const [currentTime, setCurrentTime] = useState("")
     const [showOnboarding, setShowOnboarding] = useState(false)
+    const [showMoreMenu, setShowMoreMenu] = useState(false)
  
     // Sidebar collapse — open by default on large screens (≥1024px), closed on iPad (768–1023px)
     const [sidebarOpen, setSidebarOpen] = useState(() => typeof window !== "undefined" && window.innerWidth >= 1024)
- 
+
+    // Landscape mobile: width > height AND width < 1024 (phone rotated)
+    const [isLandscapeMobile, setIsLandscapeMobile] = useState(
+        () => typeof window !== "undefined" && window.innerWidth < 1024 && window.innerWidth > window.innerHeight
+    )
+
     // Keep sidebarOpen in sync if the window is resized across the lg breakpoint
     useEffect(() => {
-        const onResize = () => { if (window.innerWidth >= 1024) setSidebarOpen(true) }
+        const onResize = () => {
+            if (window.innerWidth >= 1024) setSidebarOpen(true)
+            setIsLandscapeMobile(window.innerWidth < 1024 && window.innerWidth > window.innerHeight)
+        }
         window.addEventListener("resize", onResize)
-        return () => window.removeEventListener("resize", onResize)
+        window.addEventListener("orientationchange", onResize)
+        return () => {
+            window.removeEventListener("resize", onResize)
+            window.removeEventListener("orientationchange", onResize)
+        }
     }, [])
+
+    // Auto-collapse desktop sidebar when phone rotates to landscape
+    useEffect(() => {
+        if (isLandscapeMobile) setSidebarOpen(false)
+    }, [isLandscapeMobile])
  
     // Force-show the onboarding modal (for the ? button and demo judges)
     const openOnboarding = () => {
@@ -271,6 +291,18 @@ export function AppShell() {
                                 style={{ zIndex: 10 }}
                             />
                         </MapBackground>
+                        {/* Landscape mobile: floating sidebar toggle on left edge of map */}
+                        {isLandscapeMobile && isMapPage && (
+                            <button
+                                onClick={() => setSidebarOpen(o => !o)}
+                                className="absolute left-2 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-1 px-1.5 py-3 rounded-xl glass border border-amber2/25 text-amber2 hover:bg-amber2/10 transition-all"
+                                title={sidebarOpen ? "Collapse sidebar" : "Expand sidebar"}
+                            >
+                                <span className="font-mono text-[8px] uppercase tracking-widest" style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}>
+                                    {sidebarOpen ? "◀ Hide" : "▶ Nav"}
+                                </span>
+                            </button>
+                        )}
                     </div>
                     {/* Map-page sidebar (JourneyPage or NavigationPage aside) */}
                     {isMapPage && <Outlet context={{ mapOverlayEl }} />}
@@ -285,12 +317,33 @@ export function AppShell() {
             </div>
  
             {/* Mobile Bottom Navigation */}
-            <nav className="md:hidden h-16 flex-shrink-0 glass border-t border-border flex items-center justify-around z-50 px-1">
+            <nav className="md:hidden h-16 flex-shrink-0 glass border-t border-border flex items-center justify-around z-50 px-1 relative">
                 {mobileNavItems.map((item) => {
+                    if (item.label === "More") {
+                        // More button — opens popup instead of navigating
+                        const moreActive = pathname === "/settings" || pathname === "/about"
+                        return (
+                            <button
+                                key="more"
+                                onClick={() => setShowMoreMenu(o => !o)}
+                                className={cn(
+                                    "flex flex-col items-center gap-1 px-2 py-3 min-h-[56px] min-w-[56px] justify-center transition-all",
+                                    (moreActive || showMoreMenu) ? "text-amber2" : "text-muted-foreground"
+                                )}
+                            >
+                                {showMoreMenu
+                                    ? <X className="w-5 h-5" />
+                                    : <Menu className="w-5 h-5" />
+                                }
+                                <span className="font-mono text-xs">More</span>
+                            </button>
+                        )
+                    }
                     const isActive = pathname === item.href ||
                         (item.href === "/navigation" && pathname === "/active")
                     return (
                         <Link key={item.href} to={item.href}
+                            onClick={() => setShowMoreMenu(false)}
                             className={cn(
                                 "flex flex-col items-center gap-1 px-2 py-3 min-h-[56px] min-w-[56px] justify-center transition-all",
                                 isActive ? "text-amber2" : "text-muted-foreground"
@@ -301,6 +354,69 @@ export function AppShell() {
                         </Link>
                     )
                 })}
+
+                {/* More popup menu — floats above the nav bar */}
+                {showMoreMenu && (
+                    <>
+                        {/* Backdrop — tap outside to close */}
+                        <div
+                            className="fixed inset-0 z-40"
+                            onClick={() => setShowMoreMenu(false)}
+                        />
+                        {/* Menu panel */}
+                        <div className="absolute bottom-[68px] right-2 z-50 glass border border-border/60 rounded-2xl shadow-2xl overflow-hidden min-w-[200px]"
+                            style={{ background: "rgba(12,16,32,0.97)", backdropFilter: "blur(24px)" }}>
+                            {/* Menu header */}
+                            <div className="px-4 py-2.5 border-b border-border/30">
+                                <span className="font-mono text-[10px] text-muted-foreground/50 uppercase tracking-widest">More Options</span>
+                            </div>
+                            {/* Settings */}
+                            <button
+                                onClick={() => { navigate("/settings"); setShowMoreMenu(false) }}
+                                className={cn(
+                                    "w-full flex items-center gap-3 px-4 py-3.5 transition-colors hover:bg-bg3 text-left border-b border-border/20",
+                                    pathname === "/settings" ? "text-amber2 bg-bg3/60" : "text-foreground"
+                                )}
+                            >
+                                <div className={cn(
+                                    "w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0",
+                                    pathname === "/settings" ? "bg-amber2/15 border border-amber2/25" : "bg-bg3 border border-border/30"
+                                )}>
+                                    <Settings className={cn("w-4 h-4", pathname === "/settings" ? "text-amber2" : "text-muted-foreground")} />
+                                </div>
+                                <div>
+                                    <div className="font-mono text-sm text-foreground">Settings</div>
+                                    <div className="font-mono text-[10px] text-muted-foreground/60">Guardian, cover me, preferences</div>
+                                </div>
+                                {pathname === "/settings" && (
+                                    <div className="ml-auto w-1.5 h-1.5 rounded-full bg-amber2 flex-shrink-0" />
+                                )}
+                            </button>
+                            {/* About */}
+                            <button
+                                onClick={() => { navigate("/about"); setShowMoreMenu(false) }}
+                                className={cn(
+                                    "w-full flex items-center gap-3 px-4 py-3.5 transition-colors hover:bg-bg3 text-left",
+                                    pathname === "/about" ? "text-amber2 bg-bg3/60" : "text-foreground"
+                                )}
+                            >
+                                <div className={cn(
+                                    "w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0",
+                                    pathname === "/about" ? "bg-amber2/15 border border-amber2/25" : "bg-bg3 border border-border/30"
+                                )}>
+                                    <Info className={cn("w-4 h-4", pathname === "/about" ? "text-amber2" : "text-muted-foreground")} />
+                                </div>
+                                <div>
+                                    <div className="font-mono text-sm text-foreground">About / Pitch</div>
+                                    <div className="font-mono text-[10px] text-muted-foreground/60">Features, data sources, builder</div>
+                                </div>
+                                {pathname === "/about" && (
+                                    <div className="ml-auto w-1.5 h-1.5 rounded-full bg-amber2 flex-shrink-0" />
+                                )}
+                            </button>
+                        </div>
+                    </>
+                )}
             </nav>
         </div>
     )

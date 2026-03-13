@@ -261,6 +261,27 @@ export default function NavigationPage() {
   const [showOverlay,   setShowOverlay]   = useState(false)
   const [showGpsCard,   setShowGpsCard]   = useState(false)
   const [panelOpen,     setPanelOpen]     = useState(true)
+
+  // Landscape mobile detection (phone rotated, width < 1024 and wider than tall)
+  const [isLandscapeMobile, setIsLandscapeMobile] = useState(
+    () => window.innerWidth < 1024 && window.innerWidth > window.innerHeight
+  )
+  const [landscapeSidebarOpen, setLandscapeSidebarOpen] = useState(false)
+  useEffect(() => {
+    const h = () => {
+      const lm = window.innerWidth < 1024 && window.innerWidth > window.innerHeight
+      setIsLandscapeMobile(lm)
+      if (!lm) setLandscapeSidebarOpen(false)
+    }
+    window.addEventListener("resize", h)
+    window.addEventListener("orientationchange", h)
+    return () => {
+      window.removeEventListener("resize", h)
+      window.removeEventListener("orientationchange", h)
+    }
+  }, [])
+  // Collapse bottom panel in landscape to save vertical space
+  useEffect(() => { if (isLandscapeMobile) setPanelOpen(false) }, [isLandscapeMobile])
  
   // Journey progress — initialise from context (survives page navigation)
   const [progress,  setProgress]  = useState(journeyProgress.percent   || 0)
@@ -699,8 +720,19 @@ Give a 3-sentence safety briefing. Be specific, direct, and actionable. No pream
       {/* Bottom status panel */}
       <div className="absolute bottom-4 left-4 right-16 md:right-auto md:max-w-lg z-20 pointer-events-auto">
         <GlassPanel className="shadow-2xl border-t-4 border-mint/30 overflow-hidden">
-          <button className="md:hidden flex justify-center w-full pt-2.5 pb-1" onClick={()=>setPanelOpen(o=>!o)}>
-            <div className="w-8 h-1 rounded-full bg-border"/>
+          {/* Labeled toggle — visible on all mobile including landscape */}
+          <button
+            className="flex items-center justify-between w-full px-3 pt-2.5 pb-2 md:hidden"
+            onClick={() => setPanelOpen(o => !o)}
+          >
+            <div className="flex items-center gap-2">
+              <Shield className={`w-4 h-4 ${currentRisk.level==="HIGH"?"text-coral":currentRisk.level==="MEDIUM"?"text-amber":"text-mint"}`}/>
+              <span className="font-mono text-xs text-foreground">Journey Active</span>
+              <span className="font-mono text-[10px] text-muted-foreground">· {fmt(checkInTime)}</span>
+            </div>
+            <span className="font-mono text-[10px] text-muted-foreground uppercase">
+              {panelOpen ? "▼ Collapse" : "▲ Expand"}
+            </span>
           </button>
           <div className="p-3 md:p-4">
             <div className="flex items-center justify-between mb-3">
@@ -720,7 +752,7 @@ Give a 3-sentence safety briefing. Be specific, direct, and actionable. No pream
               className="w-full py-3 rounded-xl bg-mint text-bg font-mono text-sm font-bold flex items-center justify-center gap-2 hover:bg-mint/90 shadow-lg mb-3">
               <Check className="w-5 h-5"/> I'M SAFE
             </button>
-            <div className={`md:block transition-all ${panelOpen?"block":"hidden"}`}>
+            <div className={`transition-all ${panelOpen?"block":"hidden"}`}>
               <div className="grid grid-cols-4 gap-1.5 mb-3">
                 {[
                   {icon:Activity, label:"Mode",   value:TRANSPORT_MODES[selectedRoute.transportMode]?.icon||"🚶", color:"text-mint"},
@@ -772,11 +804,24 @@ Give a 3-sentence safety briefing. Be specific, direct, and actionable. No pream
       </div>
  
       {/* Journey Info button — mobile only, visible when sidebar is closed */}
-      {!showOverlay && (
-        <button onClick={()=>setShowOverlay(true)}
-          className="md:hidden absolute bottom-[5.5rem] left-1/2 -translate-x-1/2 z-20 px-4 py-2 rounded-xl glass border border-sky/30 text-sky font-mono text-xs uppercase tracking-wider flex items-center gap-2 pointer-events-auto">
-          <MapPin className="w-3.5 h-3.5"/> Journey Info
-        </button>
+      {(isLandscapeMobile ? !landscapeSidebarOpen : !showOverlay) && (
+        isLandscapeMobile ? (
+          /* Landscape: vertical tab on right edge of map */
+          <button onClick={()=>setLandscapeSidebarOpen(true)}
+            className="absolute top-1/2 -translate-y-1/2 right-0 z-20 flex flex-col items-center gap-1 px-1.5 py-4 rounded-l-xl glass border-l border-y border-sky/30 text-sky pointer-events-auto hover:bg-sky/8 transition-all">
+            <Activity className="w-3 h-3 mb-0.5"/>
+            <span className="font-mono text-[8px] uppercase tracking-widest text-sky" style={{ writingMode:"vertical-rl", textOrientation:"mixed" }}>Journey Info</span>
+            <span className="font-mono text-[8px]">◀</span>
+          </button>
+        ) : (
+          /* Portrait: pull-up tab bottom-center */
+          <button onClick={()=>setShowOverlay(true)}
+            className="md:hidden absolute bottom-[5.5rem] left-1/2 -translate-x-1/2 z-20 px-5 py-2.5 rounded-2xl glass border border-sky/30 text-sky font-mono text-xs uppercase tracking-wider flex items-center gap-2.5 pointer-events-auto hover:border-sky/60 hover:bg-sky/8 transition-all shadow-lg">
+            <span className="font-mono text-[10px] font-bold">▲</span>
+            <Navigation className="w-3.5 h-3.5"/>
+            ▲ Journey Info
+          </button>
+        )
       )}
  
       {/* Cover Me button — bottom-left */}
@@ -839,10 +884,42 @@ Give a 3-sentence safety briefing. Be specific, direct, and actionable. No pream
       {mapContent}
  
       {/* Sidebar — rendered in the Outlet slot (right of the map in AppShell's flex row) */}
-      <aside className={`bg-bg2 border-l border-border flex flex-col z-30 md:w-[300px] md:flex-shrink-0 md:relative md:translate-y-0 md:opacity-100 md:h-full fixed inset-x-0 bottom-0 max-h-[72vh] rounded-t-2xl shadow-2xl transition-all duration-300 ${showOverlay?"translate-y-0 opacity-100":"translate-y-full opacity-0 pointer-events-none md:opacity-100 md:translate-y-0 md:pointer-events-auto"}`}>
-        <button className="md:hidden flex justify-center w-full pt-3 pb-1 flex-shrink-0" onClick={()=>setShowOverlay(false)}>
-          <div className="w-10 h-1 rounded-full bg-border"/>
-        </button>
+      <aside
+        className={`bg-bg2 border-l border-border flex flex-col z-30 transition-all duration-300
+          ${isLandscapeMobile
+            /* Landscape: IN-FLOW so the map flex-1 fills reclaimed space when collapsed */
+            ? "relative h-full flex-shrink-0 overflow-hidden"
+            /* Portrait / desktop */
+            : `md:w-[300px] md:flex-shrink-0 md:relative md:translate-y-0 md:opacity-100 md:h-full
+               fixed inset-x-0 bottom-0 max-h-[72vh] rounded-t-2xl shadow-2xl
+               ${showOverlay ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none md:opacity-100 md:translate-y-0 md:pointer-events-auto"}`
+          }`}
+        style={isLandscapeMobile ? { width: landscapeSidebarOpen ? 300 : 0 } : undefined}
+      >
+        {/* Portrait: drag handle + labeled close */}
+        {!isLandscapeMobile && (
+          <button className="md:hidden flex flex-col items-center w-full pt-3 pb-1 flex-shrink-0 gap-1" onClick={()=>setShowOverlay(false)}>
+            <div className="w-10 h-1 rounded-full bg-border"/>
+            <span className="font-mono text-[9px] text-muted-foreground/50 uppercase tracking-widest">▼ Back to Map</span>
+          </button>
+        )}
+
+        {/* Landscape: header bar with label + collapse-to-map button */}
+        {isLandscapeMobile && (
+          <div className="flex items-center justify-between px-4 pt-3 pb-2 border-b border-border/30 flex-shrink-0" style={{ minWidth: 300 }}>
+            <div className="flex items-center gap-2">
+              <Activity className="w-3.5 h-3.5 text-sky"/>
+              <span className="font-mono text-[11px] text-foreground uppercase tracking-wider">Journey Info</span>
+            </div>
+            <button
+              onClick={() => setLandscapeSidebarOpen(false)}
+              className="flex items-center gap-1 px-2 py-1 rounded-lg text-muted-foreground hover:text-foreground hover:bg-bg3 transition-colors"
+              title="Collapse — map fills screen"
+            >
+              <span className="font-mono text-[9px] uppercase tracking-wider">Map ▶</span>
+            </button>
+          </div>
+        )}
  
         <div className="flex border-b border-border flex-shrink-0">
           {TABS.map(t=>(

@@ -78,6 +78,8 @@ export default function DashboardPage() {
     const [statusText,     setStatusText]     = useState("")
     const [triggerMsg,     setTriggerMsg]     = useState("")
     const [sidebarOpen,    setSidebarOpen]    = useState(true)
+    // Risk Scale legend: collapsed by default on mobile, always open on desktop
+    const [legendOpen,     setLegendOpen]     = useState(() => typeof window !== "undefined" && window.innerWidth >= 768)
     const [lastUpdated,    setLastUpdated]    = useState(null)
     const [searchLoading,  setSearchLoading]  = useState(false)
     const [searchNotFound, setSearchNotFound] = useState(false)
@@ -532,35 +534,48 @@ export default function DashboardPage() {
                         )}
                     </div>
 
-                    {/* BOTTOM LEFT — Risk Legend */}
+                    {/* BOTTOM LEFT — Risk Legend (collapsible on mobile) */}
                     <div className="absolute bottom-16 left-3 z-20">
-                        <GlassPanel className="px-2.5 py-2 space-y-1">
-                            <div className="font-mono text-[11px] text-muted-foreground uppercase tracking-wider mb-1.5">
-                                Risk Scale
-                            </div>
-                            {[
-                                { color: "bg-coral",  label: "High",   glow: "shadow-[0_0_6px_#FF6B4A]" },
-                                { color: "bg-amber",  label: "Medium", glow: "shadow-[0_0_6px_#FBBF24]" },
-                                { color: "bg-mint",   label: "Low",    glow: "shadow-[0_0_6px_#00E5A0]" },
-                                { color: "bg-amber2", label: "Tapped", glow: "shadow-[0_0_6px_#FB923C]" },
-                            ].map(({ color, label, glow }) => (
-                                <div key={label} className="flex items-center gap-2">
-                                    <div className={`w-2 h-2 rounded-full flex-shrink-0 ${color} ${glow}`} />
-                                    <span className="font-mono text-[11px] text-muted-foreground">{label}</span>
+                        <GlassPanel className="overflow-hidden">
+                            {/* Toggle pill — always visible */}
+                            <button
+                                onClick={() => setLegendOpen(o => !o)}
+                                className="flex items-center gap-2 px-2.5 py-2 w-full text-left"
+                            >
+                                <div className="w-2 h-2 rounded-full bg-coral flex-shrink-0" />
+                                <span className="font-mono text-[11px] text-muted-foreground uppercase tracking-wider flex-1">
+                                    Risk Scale
+                                </span>
+                                <span className={`font-mono text-[10px] text-muted-foreground/50 transition-transform duration-200 ${legendOpen ? "rotate-180" : "rotate-0"}`}>▲</span>
+                            </button>
+                            {legendOpen && (
+                                <div className="px-2.5 pb-2 space-y-1 border-t border-border/20 pt-1.5">
+                                    {[
+                                        { color: "bg-coral",  label: "High",   glow: "shadow-[0_0_6px_#FF6B4A]" },
+                                        { color: "bg-amber",  label: "Medium", glow: "shadow-[0_0_6px_#FBBF24]" },
+                                        { color: "bg-mint",   label: "Low",    glow: "shadow-[0_0_6px_#00E5A0]" },
+                                        { color: "bg-amber2", label: "Tapped", glow: "shadow-[0_0_6px_#FB923C]" },
+                                    ].map(({ color, label, glow }) => (
+                                        <div key={label} className="flex items-center gap-2">
+                                            <div className={`w-2 h-2 rounded-full flex-shrink-0 ${color} ${glow}`} />
+                                            <span className="font-mono text-[11px] text-muted-foreground">{label}</span>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+                            )}
                         </GlassPanel>
                     </div>
 
-                    {/* MOBILE — Sidebar Toggle */}
+                    {/* MOBILE — Sidebar Toggle: labeled center-bottom pull tab */}
                     <button
                         onClick={() => setSidebarOpen(o => !o)}
-                        className="absolute bottom-3 right-3 z-20 md:hidden glass rounded-xl px-3 py-2 flex items-center gap-2"
+                        className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 md:hidden glass rounded-xl px-4 py-2.5 flex items-center gap-2.5 border border-amber2/25 hover:border-amber2/50 transition-all shadow-lg"
                     >
-                        <span className="font-mono text-xs text-amber2 uppercase">
-                            {sidebarOpen ? "Hide Intel" : "Show Intel"}
+                        <span className={`font-mono text-[10px] font-bold transition-transform duration-200 ${sidebarOpen ? "rotate-180" : "rotate-0"} text-amber2`}>▲</span>
+                        <span className="font-mono text-xs text-amber2 uppercase tracking-wider">
+                            {sidebarOpen ? "Back to Map" : "Safety Intel"}
                         </span>
-                        <div className={`w-1.5 h-1.5 rounded-full bg-amber2 ${sidebarOpen ? "" : "animate-pulse"}`} />
+                        <div className={`w-1.5 h-1.5 rounded-full ${sidebarOpen ? "bg-amber2" : "bg-amber2 animate-pulse"}`} />
                     </button>
 
                     {/* BOTTOM — Voice Bar */}
@@ -580,6 +595,15 @@ export default function DashboardPage() {
             <aside className={`w-full md:w-[320px] lg:w-[380px] flex-shrink-0 bg-bg2 border-l border-border flex flex-col z-30 max-h-[55vh] md:max-h-none transition-all ${
                 sidebarOpen ? "flex" : "hidden md:flex"
             }`}>
+                {/* Mobile collapse handle — always visible at top of open sidebar */}
+                <button
+                    onClick={() => setSidebarOpen(false)}
+                    className="md:hidden flex items-center justify-center gap-2 py-2.5 border-b border-border/30 text-muted-foreground hover:text-amber2 transition-colors flex-shrink-0"
+                >
+                    <span className="font-mono text-[10px] font-bold text-amber2 rotate-180">▲</span>
+                    <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-wider">Back to Map</span>
+                    <span className="font-mono text-[10px] font-bold text-amber2 rotate-180">▲</span>
+                </button>
 
                 <div className="flex border-b border-border flex-shrink-0">
                     {["briefing", "live-intel", "history"].map(tab => (

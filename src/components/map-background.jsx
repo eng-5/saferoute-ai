@@ -123,10 +123,21 @@ function MapStyleToggle({ activeStyle, is3D, onStyleChange, on3DToggle, containe
   const { pos, dragging, hasMoved, onMouseDown, onTouchStart } =
     useDraggable(containerRef, toggleRef)
  
+  const [isLandscapeMobile, setIsLandscapeMobile] = useState(
+    () => window.innerWidth < 1024 && window.innerWidth > window.innerHeight
+  )
+
   useEffect(() => {
-    const h = () => setIsMobile(window.innerWidth < 768)
+    const h = () => {
+      setIsMobile(window.innerWidth < 768)
+      setIsLandscapeMobile(window.innerWidth < 1024 && window.innerWidth > window.innerHeight)
+    }
     window.addEventListener("resize", h)
-    return () => window.removeEventListener("resize", h)
+    window.addEventListener("orientationchange", h)
+    return () => {
+      window.removeEventListener("resize", h)
+      window.removeEventListener("orientationchange", h)
+    }
   }, [])
  
   const safe = (fn) => () => {
@@ -201,42 +212,78 @@ function MapStyleToggle({ activeStyle, is3D, onStyleChange, on3DToggle, containe
       </div>
  
       {isMobile ? (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
-          {expanded && (
-            <div style={{ ...glass, padding: "8px 6px", display: "flex", flexDirection: "column", gap: 2, animation: "slideDown 0.2s ease-out", minWidth: 150 }}>
-              <div style={{ fontFamily: "monospace", fontSize: 7, color: "rgba(245,240,232,0.3)", letterSpacing: "0.18em", padding: "2px 8px 6px", textAlign: "center" }}>
-                MAP STYLE
-              </div>
-              {MAP_STYLES.map(s => (
-                <button key={s.id} onClick={safe(() => { onStyleChange(s.id); setExpanded(false) })} style={{ ...labelBtn(activeStyle === s.id), padding: "8px 12px" }}>
-                  <span style={{ fontSize: 16 }}>{s.icon}</span>
-                  <span style={{ ...labelText(activeStyle === s.id), fontSize: 10 }}>{s.label.toUpperCase()}</span>
-                  {activeStyle === s.id && activeDot}
+        isLandscapeMobile ? (
+          /* ── Landscape mobile: collapsed labeled pill → expands to full panel ── */
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6 }}>
+            {expanded && (
+              <div style={{ ...glass, padding: "8px 6px", display: "flex", flexDirection: "column", gap: 2, animation: "slideDown 0.2s ease-out", minWidth: 164 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "2px 8px 6px" }}>
+                  <span style={{ fontFamily: "monospace", fontSize: 7, color: "rgba(245,240,232,0.3)", letterSpacing: "0.18em" }}>MAP STYLE</span>
+                  <button onClick={safe(() => setExpanded(false))} style={{ background: "none", border: "none", cursor: "pointer", color: "rgba(245,240,232,0.5)", fontSize: 13, lineHeight: 1, padding: "0 2px" }}>✕</button>
+                </div>
+                {MAP_STYLES.map(s => (
+                  <button key={s.id} onClick={safe(() => { onStyleChange(s.id); setExpanded(false) })} style={{ ...labelBtn(activeStyle === s.id), padding: "8px 12px" }}>
+                    <span style={{ fontSize: 15 }}>{s.icon}</span>
+                    <span style={{ ...labelText(activeStyle === s.id), fontSize: 10 }}>{s.label.toUpperCase()}</span>
+                    {activeStyle === s.id && activeDot}
+                  </button>
+                ))}
+                <div style={{ height: 1, background: "rgba(255,255,255,0.06)", margin: "4px 0" }} />
+                <button onClick={safe(() => { on3DToggle(); setExpanded(false) })} style={{ ...labelBtn(is3D), padding: "8px 12px" }}>
+                  <span style={{ fontSize: 15 }}>🏙</span>
+                  <span style={{ ...labelText(is3D), fontSize: 10 }}>{is3D ? "3D ON" : "3D BUILDINGS"}</span>
                 </button>
-              ))}
-              <div style={{ height: 1, background: "rgba(255,255,255,0.06)", margin: "4px 0" }} />
-              <button onClick={safe(() => { on3DToggle(); setExpanded(false) })} style={{ ...labelBtn(is3D), padding: "8px 12px" }}>
-                <span style={{ fontSize: 16 }}>🏙</span>
-                <span style={{ ...labelText(is3D), fontSize: 10 }}>{is3D ? "3D ON" : "3D BUILDINGS"}</span>
-              </button>
-            </div>
-          )}
-          <div style={{ ...glass, padding: "6px 8px", display: "flex", gap: 4, alignItems: "center" }}>
-            {MAP_STYLES.map(s => (
-              <button key={s.id} onClick={safe(() => onStyleChange(s.id))} title={s.label} style={iconBtn(activeStyle === s.id)}>
-                {s.icon}
-              </button>
-            ))}
-            {divider}
-            <button onClick={safe(on3DToggle)} title="3D Buildings" style={iconBtn(is3D)}>🏙</button>
-            {divider}
+              </div>
+            )}
+            {/* Collapsed pill — always visible in landscape */}
             <button
               onClick={safe(() => setExpanded(e => !e))}
-              title={expanded ? "Collapse" : "Show labels"}
-              style={{ width: 36, height: 36, borderRadius: 8, border: "none", cursor: "pointer", fontSize: 12, fontFamily: "monospace", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.2s", background: expanded ? "rgba(251,146,60,0.15)" : "transparent", color: expanded ? "#FB923C" : "rgba(245,240,232,0.4)", transform: expanded ? "rotate(180deg)" : "rotate(0deg)" }}
-            >▲</button>
+              style={{ ...glass, padding: "7px 12px", display: "flex", alignItems: "center", gap: 7, cursor: "pointer", border: expanded ? "1px solid rgba(251,146,60,0.38)" : "1px solid rgba(251,146,60,0.18)" }}
+            >
+              <span style={{ fontSize: 14 }}>{MAP_STYLES.find(s => s.id === activeStyle)?.icon || "🗺"}</span>
+              <span style={{ fontFamily: "monospace", fontSize: 9, letterSpacing: "0.1em", color: "rgba(245,240,232,0.7)", fontWeight: 700 }}>MAP STYLE</span>
+              <span style={{ fontFamily: "monospace", fontSize: 9, color: expanded ? "#FB923C" : "rgba(245,240,232,0.4)", display: "inline-block", transition: "transform 0.2s", transform: expanded ? "rotate(180deg)" : "rotate(0deg)" }}>▲</span>
+            </button>
           </div>
-        </div>
+        ) : (
+          /* ── Portrait mobile: icon row + expand ── */
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+            {expanded && (
+              <div style={{ ...glass, padding: "8px 6px", display: "flex", flexDirection: "column", gap: 2, animation: "slideDown 0.2s ease-out", minWidth: 150 }}>
+                <div style={{ fontFamily: "monospace", fontSize: 7, color: "rgba(245,240,232,0.3)", letterSpacing: "0.18em", padding: "2px 8px 6px", textAlign: "center" }}>
+                  MAP STYLE
+                </div>
+                {MAP_STYLES.map(s => (
+                  <button key={s.id} onClick={safe(() => { onStyleChange(s.id); setExpanded(false) })} style={{ ...labelBtn(activeStyle === s.id), padding: "8px 12px" }}>
+                    <span style={{ fontSize: 16 }}>{s.icon}</span>
+                    <span style={{ ...labelText(activeStyle === s.id), fontSize: 10 }}>{s.label.toUpperCase()}</span>
+                    {activeStyle === s.id && activeDot}
+                  </button>
+                ))}
+                <div style={{ height: 1, background: "rgba(255,255,255,0.06)", margin: "4px 0" }} />
+                <button onClick={safe(() => { on3DToggle(); setExpanded(false) })} style={{ ...labelBtn(is3D), padding: "8px 12px" }}>
+                  <span style={{ fontSize: 16 }}>🏙</span>
+                  <span style={{ ...labelText(is3D), fontSize: 10 }}>{is3D ? "3D ON" : "3D BUILDINGS"}</span>
+                </button>
+              </div>
+            )}
+            <div style={{ ...glass, padding: "6px 8px", display: "flex", gap: 4, alignItems: "center" }}>
+              {MAP_STYLES.map(s => (
+                <button key={s.id} onClick={safe(() => onStyleChange(s.id))} title={s.label} style={iconBtn(activeStyle === s.id)}>
+                  {s.icon}
+                </button>
+              ))}
+              {divider}
+              <button onClick={safe(on3DToggle)} title="3D Buildings" style={iconBtn(is3D)}>🏙</button>
+              {divider}
+              <button
+                onClick={safe(() => setExpanded(e => !e))}
+                title={expanded ? "Collapse labels" : "Show labels"}
+                style={{ width: 36, height: 36, borderRadius: 8, border: "none", cursor: "pointer", fontSize: 12, fontFamily: "monospace", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.2s", background: expanded ? "rgba(251,146,60,0.15)" : "transparent", color: expanded ? "#FB923C" : "rgba(245,240,232,0.4)", transform: expanded ? "rotate(180deg)" : "rotate(0deg)" }}
+              >▲</button>
+            </div>
+          </div>
+        )
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
           <div style={{ ...glass, padding: 6, display: "flex", flexDirection: "column", gap: 2 }}>
@@ -380,7 +427,6 @@ export function MapBackground({
  
     const token =
       import.meta.env?.VITE_MAPBOX_TOKEN ||
-      process.env?.NEXT_PUBLIC_MAPBOX_TOKEN ||
       ""
  
     if (!token) {
@@ -918,19 +964,23 @@ export function MapBackground({
   // window where isStyleLoaded() returns false but the map is actually ready.
   function _paintRoutesSafe(routes, selectedId, attempt) {
     if (!map.current || attempt > 20) return
- 
-    // Check if map style is ready enough to accept sources/layers.
-    // We check for the style's loaded state via the internal style object
-    // rather than isStyleLoaded() which requires all tiles to be loaded too.
-    const styleReady = map.current.getStyle() &&
-      map.current.getStyle().layers &&
-      map.current.getStyle().layers.length > 0
- 
+
+    // getStyle() itself can throw "Style is not done loading" before the map
+    // has initialised — wrap the whole readiness check so the error never
+    // propagates to the caller and we just retry on the next frame instead.
+    let styleReady = false
+    try {
+      const style = map.current.getStyle()
+      styleReady = !!(style && style.layers && style.layers.length > 0)
+    } catch {
+      styleReady = false
+    }
+
     if (!styleReady) {
       requestAnimationFrame(() => _paintRoutesSafe(routes, selectedId, attempt + 1))
       return
     }
- 
+
     try {
       _paintRouteLayers(routes, selectedId)
     } catch (err) {

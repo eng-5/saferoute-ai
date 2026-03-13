@@ -479,6 +479,25 @@ export default function JourneyPage() {
   const [showGpsCard,     setShowGpsCard]     = useState(false)
   const [launching,       setLaunching]       = useState(false)
   const [arrivalMins,     setArrivalMins]     = useState("")   // arrive-safe timer
+
+  // Landscape mobile detection — phone rotated (width > height, width < 1024)
+  const [isLandscapeMobile, setIsLandscapeMobile] = useState(
+    () => window.innerWidth < 1024 && window.innerWidth > window.innerHeight
+  )
+  const [landscapeSidebarOpen, setLandscapeSidebarOpen] = useState(false)
+  useEffect(() => {
+    const h = () => {
+      const lm = window.innerWidth < 1024 && window.innerWidth > window.innerHeight
+      setIsLandscapeMobile(lm)
+      if (!lm) setLandscapeSidebarOpen(false) // reset when leaving landscape
+    }
+    window.addEventListener("resize", h)
+    window.addEventListener("orientationchange", h)
+    return () => {
+      window.removeEventListener("resize", h)
+      window.removeEventListener("orientationchange", h)
+    }
+  }, [])
  
   // Voice
   const [voice, setVoice] = useState({
@@ -557,7 +576,7 @@ export default function JourneyPage() {
   }, [selectedRouteId])
  
   // Redraw saved routes from journeyPlan on mount (map is persistent, no timer needed).
-  // 150ms retry handles the resize-settle race when returning from non-map pages.
+  // 150ms + 400ms retries handle the resize-settle race when returning from non-map pages.
   useEffect(() => {
     if (!journeyPlan?.routes?.length || !sharedMapRef.current) return
     const draw = () => {
@@ -566,9 +585,10 @@ export default function JourneyPage() {
       const sel = journeyPlan.routes.find(r=>r.id===journeyPlan.selectedRouteId)
       if (sel?.geometry) sharedMapRef.current.fitRouteBounds(sel.geometry)
     }
-    draw()
-    const t = setTimeout(draw, 150)
-    return () => clearTimeout(t)
+    // Don't call draw() immediately — give the style a frame to settle first
+    const t1 = setTimeout(draw, 150)
+    const t2 = setTimeout(draw, 400)
+    return () => { clearTimeout(t1); clearTimeout(t2) }
   }, [])
  
   // Ref mirror of journeyPlan — lets the persist effect read the current value
@@ -723,12 +743,26 @@ export default function JourneyPage() {
           </GlassPanel>
         </div>
       )}
-      {/* Mobile "Show Routes" button — only when sidebar is hidden */}
-      {!showRoutes && (
+      {/* Landscape: floating vertical tab on right edge to open sidebar */}
+      {isLandscapeMobile && !landscapeSidebarOpen && (
+        <button
+          onClick={() => setLandscapeSidebarOpen(true)}
+          className="absolute top-1/2 -translate-y-1/2 right-0 z-30 flex flex-col items-center gap-1 px-1.5 py-4 rounded-l-xl glass border-l border-y border-amber2/30 text-amber2 pointer-events-auto hover:bg-amber2/10 transition-all"
+        >
+          <Navigation className="w-3 h-3 mb-0.5"/>
+          <span className="font-mono text-[8px] uppercase tracking-widest" style={{ writingMode:"vertical-rl", textOrientation:"mixed" }}>
+            Plan Journey
+          </span>
+          <span className="font-mono text-[8px]">◀</span>
+        </button>
+      )}
+      {/* Portrait: bottom-center pull-up button */}
+      {!isLandscapeMobile && !showRoutes && (
         <button onClick={()=>setShowRoutes(true)}
-          className="md:hidden absolute bottom-4 left-1/2 -translate-x-1/2 z-30 px-5 py-2.5 rounded-full glass border border-amber2/40 text-amber2 font-mono text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg pointer-events-auto">
+          className="md:hidden absolute bottom-4 left-1/2 -translate-x-1/2 z-30 px-5 py-3 rounded-2xl glass border border-amber2/40 text-amber2 font-mono text-xs uppercase tracking-wider flex items-center gap-2.5 shadow-lg pointer-events-auto hover:border-amber2/70 hover:bg-amber2/8 transition-all">
+          <span className="font-mono text-[10px] font-bold">▲</span>
           <Navigation className="w-3.5 h-3.5"/>
-          {routes.length?"Show Routes":"Plan Journey"}
+          {routes.length?"▲ Show Routes":"▲ Plan Journey"}
         </button>
       )}
     </div>,
@@ -750,13 +784,50 @@ export default function JourneyPage() {
       {mapOverlays}
  
       {/* Sidebar — rendered directly in the Outlet slot (right of the map in AppShell's flex row) */}
-      <aside className={`w-full md:w-[380px] lg:w-[420px] flex-shrink-0 bg-bg2 border-l border-border flex flex-col z-30 transition-all duration-300 md:translate-y-0 md:opacity-100 md:relative md:pointer-events-auto md:h-full ${showRoutes?"fixed inset-x-0 bottom-0 max-h-[88vh] overflow-y-auto rounded-t-2xl shadow-2xl":"fixed inset-x-0 bottom-0 max-h-[88vh] translate-y-full opacity-0 pointer-events-none md:opacity-100 md:translate-y-0 md:pointer-events-auto"}`}>
-        <div className="md:hidden flex justify-center pt-3 pb-1 flex-shrink-0">
-          <div className="w-10 h-1 rounded-full bg-border"/>
-        </div>
-        <button onClick={()=>setShowRoutes(false)} className="md:hidden absolute top-3 right-4 text-muted-foreground hover:text-foreground z-10">
-          <X className="w-5 h-5"/>
-        </button>
+      <aside
+        className={`bg-bg2 border-l border-border flex flex-col z-30 transition-all duration-300
+          ${isLandscapeMobile
+            ? "relative h-full flex-shrink-0 overflow-hidden"
+            : `md:w-[380px] lg:w-[420px] md:flex-shrink-0 md:relative md:pointer-events-auto md:h-full
+               ${showRoutes
+                 ? "fixed inset-x-0 bottom-0 max-h-[65vh] overflow-y-auto rounded-t-2xl shadow-2xl"
+                 : "fixed inset-x-0 bottom-0 max-h-[65vh] translate-y-full opacity-0 pointer-events-none md:opacity-100 md:translate-y-0 md:pointer-events-auto"
+               }`
+          }`}
+        style={isLandscapeMobile ? { width: landscapeSidebarOpen ? 320 : 0 } : undefined}
+      >
+        {/* Landscape: header bar with label + collapse button */}
+        {isLandscapeMobile && (
+          <div className="flex items-center justify-between px-4 pt-3 pb-2 border-b border-border/30 flex-shrink-0" style={{ minWidth: 320 }}>
+            <div className="flex items-center gap-2">
+              <Navigation className="w-3.5 h-3.5 text-amber2"/>
+              <span className="font-mono text-[11px] text-foreground uppercase tracking-wider">Plan Journey</span>
+            </div>
+            <button
+              onClick={() => setLandscapeSidebarOpen(false)}
+              className="w-7 h-7 rounded-full flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-bg3 transition-colors"
+              title="Collapse — map fills screen"
+            >
+              <X className="w-4 h-4"/>
+            </button>
+          </div>
+        )}
+        {/* Portrait mobile drag handle + labeled collapse button */}
+        {!isLandscapeMobile && (
+          <div className="md:hidden flex-shrink-0">
+            <div className="flex justify-center pt-3 pb-1">
+              <div className="w-10 h-1 rounded-full bg-border"/>
+            </div>
+            <button
+              onClick={()=>setShowRoutes(false)}
+              className="w-full flex items-center justify-center gap-2 py-2 border-b border-border/30 text-muted-foreground hover:text-amber2 transition-colors"
+            >
+              <span className="font-mono text-[10px] font-bold text-amber2 rotate-180">▲</span>
+              <span className="font-mono text-[10px] uppercase tracking-wider">Back to Map</span>
+              <span className="font-mono text-[10px] font-bold text-amber2 rotate-180">▲</span>
+            </button>
+          </div>
+        )}
  
         {/* Active navigation banner — visible when user is previewing routes while nav is live */}
         <ActiveNavBanner activeJourney={activeJourney} onGoBack={()=>navigate("/navigation")}/>

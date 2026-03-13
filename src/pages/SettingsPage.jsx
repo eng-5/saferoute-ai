@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react"
+import { useNavigate } from "react-router-dom"
 import { GlassPanel } from "@/components/glass-panel"
 import { GuardianContacts } from "@/components/guardian-contacts"
 import { useSafety } from "@/context/SafetyContext"
@@ -6,7 +7,8 @@ import {
   Shield, Bell, Eye, User, Lock, ChevronRight, LogOut, Mic, Moon, Sun,
   Database, Wifi, WifiOff, MapPin, Activity, Check, AlertCircle,
   Volume2, VolumeX, Navigation, Clock, Flame, RefreshCw, Trash2,
-  Info, Star, Globe, Key, Cpu, Phone, CheckCircle
+  Info, Star, Globe, Key, Cpu, Phone, CheckCircle, Award, TrendingUp,
+  ChevronDown, ExternalLink
 } from "lucide-react"
  
 // ── TOGGLE ────────────────────────────────────────────────────
@@ -123,10 +125,13 @@ const DEFAULTS = {
 }
  
 export default function SettingsPage() {
+  const navigate = useNavigate()
   const {
     neighborhoods = [], fireIncidents = [], hasLiveData, loading,
     confidenceScore, currentRisk, activeJourney, stats = {},
   } = useSafety()
+
+  const [aboutOpen, setAboutOpen] = useState(false)
  
   const [toggles, setToggles] = useState(() => {
     try {
@@ -365,34 +370,128 @@ export default function SettingsPage() {
           </div>
         </div>
  
-        {/* App info */}
-        <GlassPanel className="p-5">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-2">
-              <Globe className="w-4 h-4 text-sky"/>
-              <span className="font-mono text-xs text-foreground uppercase tracking-wider">About This App</span>
-            </div>
-            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber2/10 border border-amber2/20">
-              <Star className="w-3 h-3 text-amber2"/>
-              <span className="font-mono text-xs text-amber2">WWV Hackathon 2026</span>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-3 mb-4">
-            {[
-              ["Version",     "2.0.0",           "text-foreground"],
-              ["Stack",       "React + Vite",    "text-sky"],
-              ["AI Model",    "LLaMA 3.3 70B",   "text-amber2"],
-              ["Data Source", "ArcGIS Open Data","text-mint"],
-            ].map(([label, val, col]) => (
-              <div key={label} className="bg-bg3 rounded-xl p-3">
-                <div className="font-mono text-[11px] text-muted-foreground uppercase mb-1">{label}</div>
-                <div className={`font-mono text-xs ${col}`}>{val}</div>
+        {/* ── About This App — full pitch panel ── */}
+        <GlassPanel className="overflow-hidden">
+          {/* Collapsible header */}
+          <button
+            onClick={() => setAboutOpen(o => !o)}
+            className="w-full flex items-center justify-between p-5 text-left"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-amber2/15 border border-amber2/25 flex items-center justify-center flex-shrink-0">
+                <Award className="w-4 h-4 text-amber2"/>
               </div>
-            ))}
-          </div>
-          <p className="font-mono text-xs text-muted-foreground/60 text-center">
-            Built solo from Nigeria · Public Safety Track · March 2026
-          </p>
+              <div>
+                <div className="flex items-center gap-2">
+                  <span className="font-mono text-xs text-foreground uppercase tracking-wider">About SafeRoute AI+</span>
+                  <span className="px-2 py-0.5 rounded-full bg-amber2/10 border border-amber2/20 font-mono text-[10px] text-amber2">WWV 2026</span>
+                </div>
+                <p className="font-mono text-[11px] text-muted-foreground/60 mt-0.5">Built solo from Nigeria · Public Safety Track</p>
+              </div>
+            </div>
+            <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${aboutOpen ? "rotate-180" : ""}`}/>
+          </button>
+
+          {aboutOpen && (
+            <div className="px-5 pb-5 space-y-5 border-t border-border/20">
+
+              {/* Tagline */}
+              <div className="pt-4">
+                <p className="font-serif italic text-base text-foreground leading-relaxed">
+                  "Real-time AI safety intelligence for every journey — powered by live fire/rescue data, Groq LLaMA 3.3, and a three-layer guardian system."
+                </p>
+              </div>
+
+              {/* Tech stack grid */}
+              <div className="grid grid-cols-2 gap-2.5">
+                {[
+                  ["Version",      "2.0.0",            "text-foreground"],
+                  ["Framework",    "React + Vite",     "text-sky"],
+                  ["AI Engine",    "LLaMA 3.3 70B",    "text-amber2"],
+                  ["Live Data",    "ArcGIS Open Data", "text-mint"],
+                  ["Maps",         "Mapbox GL JS",      "text-sky"],
+                  ["Alerts",       "EmailJS + SMS",    "text-amber2"],
+                ].map(([label, val, col]) => (
+                  <div key={label} className="bg-bg3 rounded-xl p-3">
+                    <div className="font-mono text-[10px] text-muted-foreground uppercase mb-1">{label}</div>
+                    <div className={`font-mono text-xs ${col}`}>{val}</div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Features list */}
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <TrendingUp className="w-3.5 h-3.5 text-mint"/>
+                  <span className="font-mono text-[11px] text-muted-foreground uppercase tracking-wider">Key Features</span>
+                </div>
+                <div className="space-y-2">
+                  {[
+                    ["🗺",  "AI Route Scoring",         "3 colour-coded routes ranked by live fire/rescue incidents"],
+                    ["🤖",  "AI Situational Brief",      "Groq LLaMA streams a 3-sentence real-time area briefing"],
+                    ["📡",  "Silent Distress Broadcast", "6 one-tap presets → WhatsApp + email + clipboard with GPS"],
+                    ["📞",  "Fake Call / Cover Me",      "Simulated incoming call from a named contact for safety cover"],
+                    ["🛡",  "Guardian Live Watch",       "Share /watch link — guardian sees your route start & ETA"],
+                    ["⏱",  "Arrive Safe Timer",          "Alert guardians if you don't arrive within your set window"],
+                    ["🧠",  "Safe Corridor Learning",    "Post-journey feeling saved → personalises future route risk"],
+                    ["🔴",  "Long-press SOS",            "2s hold → silent distress; tap → immediate emergency alert"],
+                  ].map(([icon, title, desc]) => (
+                    <div key={title} className="flex items-start gap-3 p-2.5 bg-bg3/50 rounded-xl">
+                      <span className="text-base flex-shrink-0 mt-0.5">{icon}</span>
+                      <div>
+                        <div className="font-mono text-xs text-foreground">{title}</div>
+                        <div className="font-mono text-[10px] text-muted-foreground/70 mt-0.5 leading-relaxed">{desc}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Data sources */}
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <Database className="w-3.5 h-3.5 text-sky"/>
+                  <span className="font-mono text-[11px] text-muted-foreground uppercase tracking-wider">Data Sources</span>
+                </div>
+                <div className="space-y-2">
+                  {[
+                    ["Montgomery Fire/Rescue", "ArcGIS Open Data", "Live", "text-mint"],
+                    ["Risk Scoring",           "AI composite model","Derived","text-amber2"],
+                    ["Route Geometry",         "Mapbox Directions","Live", "text-sky"],
+                    ["311 Reports",            "Community sourced", "Simulated","text-muted-foreground"],
+                  ].map(([src, detail, status, col]) => (
+                    <div key={src} className="flex items-center justify-between p-2.5 bg-bg3/50 rounded-xl">
+                      <div>
+                        <div className="font-mono text-xs text-foreground">{src}</div>
+                        <div className="font-mono text-[10px] text-muted-foreground/60">{detail}</div>
+                      </div>
+                      <span className={`font-mono text-[10px] px-2 py-0.5 rounded-full bg-bg3 border border-border/30 ${col}`}>{status}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Builder note */}
+              <div className="p-3 rounded-xl bg-mint/6 border border-mint/20">
+                <div className="flex items-center gap-2 mb-1.5">
+                  <Shield className="w-3.5 h-3.5 text-mint"/>
+                  <span className="font-mono text-[11px] text-mint uppercase tracking-wider">The Builder</span>
+                </div>
+                <p className="font-mono text-xs text-foreground/80 leading-relaxed">
+                  Nkechukwu — solo developer, Nigeria. Built SafeRoute AI+ for the World Wide Vibes Hackathon 2026 Public Safety track. Full-stack from scratch: React, Mapbox GL, Groq LLaMA, live ArcGIS data, and EmailJS guardian alerts.
+                </p>
+              </div>
+
+              {/* Full pitch link */}
+              <button
+                onClick={() => navigate("/about")}
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl border border-amber2/30 text-amber2 font-mono text-xs uppercase tracking-wider hover:bg-amber2/8 transition-colors"
+              >
+                <ExternalLink className="w-3.5 h-3.5"/>
+                View Full Pitch Deck
+              </button>
+            </div>
+          )}
         </GlassPanel>
  
         {/* Cover Me / Fake Call settings */}
