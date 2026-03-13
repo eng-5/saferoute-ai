@@ -2,28 +2,28 @@ import { useState, useRef, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import { Send, Bot, Loader2, Volume2, VolumeX } from "lucide-react"
 import { ConfidenceMeter } from "@/components/confidence-meter"
-
+ 
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 const GROQ_MODEL = "llama-3.3-70b-versatile"
-
+ 
 function buildSystemPrompt(aiContext = "") {
     return `You are SafeRoute AI+, an intelligent civic safety assistant for Montgomery, Alabama.
 Your role is to help residents and visitors navigate Montgomery safely using real-time data.
-
+ 
 CRITICAL DATA RULES:
 - The data below contains NEIGHBORHOOD RISK SCORES (0–99 danger scale, higher = more dangerous)
 - These are NOT food inspection scores. Risk score 85 = HIGH DANGER. Risk score 52 = MEDIUM/SAFE.
 - Food inspection scores (90–100) are separate — higher food score = SAFER food establishment
 - ALWAYS use the exact risk_score values from the neighborhood data below
 - NEVER confuse food scores with neighborhood risk scores
-
+ 
 ${aiContext ? aiContext : "No live data available — answer generally about Montgomery safety."}
-
+ 
 Risk level guide:
 - LOW (risk score 0–39): safe area, normal precautions
 - MEDIUM (risk score 40–64): stay alert, aware of surroundings
 - HIGH (risk score 65–99): avoid if possible, use alternate routes
-
+ 
 Your personality:
 - Confident but empathetic
 - Always cite the exact neighborhood risk score when answering location questions
@@ -31,23 +31,23 @@ Your personality:
 - Always end with a clear actionable recommendation
 - NEVER abbreviate neighborhood names — always write full name
 - NEVER cut off mid-word — if you must shorten, finish the current sentence first
-
+ 
 Key Montgomery areas: Downtown District, Oak Park, Cloverdale, Fairview,
 Hull Street Corridor, Eastchase, Midtown, Dexter Avenue, Perry Street,
 Commerce Street, Jackson Hospital area.`
 }
-
+ 
 const SUGGESTED_PROMPTS = [
     "Is Downtown safe tonight?",
     "Safest route to Oak Park?",
     "Where to avoid after 10pm?",
     "Hull Street risk level?",
 ]
-
+ 
 async function callGroq(messages, aiContext) {
     const token = import.meta.env.VITE_GROQ_API_KEY
     if (!token) throw new Error("Missing VITE_GROQ_API_KEY in .env")
-
+ 
     const response = await fetch(GROQ_API_URL, {
         method: "POST",
         headers: {
@@ -65,15 +65,15 @@ async function callGroq(messages, aiContext) {
             stream: true,
         }),
     })
-
+ 
     if (!response.ok) {
         const err = await response.json()
         throw new Error(err.error?.message || "Groq API error")
     }
-
+ 
     return response.body
 }
-
+ 
 // ── VOICE OUTPUT ──────────────────────────────────────────────
 // Chrome blocks speechSynthesis unless first triggered by a user gesture.
 // We unlock it by speaking a silent utterance on the first user interaction.
@@ -81,20 +81,45 @@ let speechUnlocked = false
 // Monotonically increasing token — cancelling speech increments this so
 // stale onend / onerror callbacks from the previous utterance are ignored.
 let _speechToken = 0
-
+ 
+// Pre-load voices as soon as the browser is ready — eliminates the delay
+// on the first real speech call. Chrome loads voices lazily; calling
+// getVoices() and listening to voiceschanged forces it to load them now.
+function preloadVoices() {
+    if (!window.speechSynthesis) return
+    const voices = window.speechSynthesis.getVoices()
+    if (voices.length > 0) return // already loaded
+    // Not loaded yet — listen for the event and fire a silent utterance
+    // the moment they arrive so the engine is fully warm
+    window.speechSynthesis.addEventListener("voiceschanged", () => {
+        if (speechUnlocked) return
+        const silent = new SpeechSynthesisUtterance(" ")
+        silent.volume = 0
+        window.speechSynthesis.speak(silent)
+        window.speechSynthesis.cancel()
+        speechUnlocked = true
+    }, { once: true })
+    // Trigger voice loading
+    window.speechSynthesis.getVoices()
+}
+ 
+// Run immediately when the module loads (safe — no user gesture needed for getVoices)
+if (typeof window !== "undefined") preloadVoices()
+ 
 function unlockSpeech() {
     if (speechUnlocked || !window.speechSynthesis) return
-    const silent = new SpeechSynthesisUtterance("")
+    const silent = new SpeechSynthesisUtterance(" ")
     silent.volume = 0
     window.speechSynthesis.speak(silent)
+    window.speechSynthesis.cancel()
     speechUnlocked = true
 }
-
+ 
 export function cancelSpeech() {
     _speechToken++                          // invalidate any pending onend
     window.speechSynthesis?.cancel()
 }
-
+ 
 function speakText(text, onEnd) {
     if (!window.speechSynthesis) return
     const myToken = ++_speechToken          // claim this token
@@ -105,12 +130,21 @@ function speakText(text, onEnd) {
     utterance.rate  = 0.92
     utterance.pitch = 1.0
     utterance.volume = 1.0
+ 
+    // Pick the best available English voice — prefer Google/natural voices
+    // which start faster and sound better than browser defaults
+    const voices = window.speechSynthesis.getVoices()
+    const preferred = voices.find(v => v.name.includes("Google") && v.lang.startsWith("en"))
+        || voices.find(v => v.lang.startsWith("en-US") && !v.localService === false)
+        || voices.find(v => v.lang.startsWith("en"))
+    if (preferred) utterance.voice = preferred
+ 
     // Only fire the callback when the token still matches — i.e. no cancel happened
     utterance.onend   = () => { if (_speechToken === myToken) onEnd?.() }
     utterance.onerror = () => { if (_speechToken === myToken) onEnd?.() }
     window.speechSynthesis.speak(utterance)
 }
-
+ 
 // ── COMPONENT ─────────────────────────────────────────────────
 export function AIChat({ initialMessages = [], className, aiContext = "", triggerMessage = "" }) {
     const [messages, setMessages] = useState(initialMessages)
@@ -123,63 +157,63 @@ export function AIChat({ initialMessages = [], className, aiContext = "", trigge
     const [speakingId,   setSpeakingId]   = useState(null)   // id of message currently being read
     const bottomRef = useRef(null)
     const lastTrigger = useRef("")
-
+ 
     useEffect(() => {
         if (triggerMessage && triggerMessage !== lastTrigger.current) {
             lastTrigger.current = triggerMessage
             sendMessage(triggerMessage)
         }
     }, [triggerMessage])
-
+ 
     useEffect(() => {
         bottomRef.current?.scrollIntoView({ behavior: "smooth" })
     }, [messages, streaming])
-
+ 
     // Cancel any speech on unmount
     useEffect(() => {
         return () => { window.speechSynthesis?.cancel() }
     }, [])
-
+ 
     const sendMessage = async (text) => {
         if (!text.trim() || loading) return
-
+ 
         // Unlock speech engine on first user gesture — Chrome requires this
         unlockSpeech()
-
+ 
         setHasSent(true)
         setError(null)
-
+ 
         const userMsg = {
             id: Date.now().toString(),
             role: "user",
             content: text.trim(),
         }
-
+ 
         const history = [...messages, userMsg].map((m) => ({
             role: m.role,
             content: m.content,
         }))
-
+ 
         setMessages((prev) => [...prev, userMsg])
         setInput("")
         setLoading(true)
         setStreaming("")
-
+ 
         try {
             const body = await callGroq(history, aiContext)
             const reader = body.getReader()
             const decoder = new TextDecoder()
             let fullText = ""
-
+ 
             setLoading(false)
-
+ 
             while (true) {
                 const { done, value } = await reader.read()
                 if (done) break
-
+ 
                 const chunk = decoder.decode(value)
                 const lines = chunk.split("\n").filter((l) => l.startsWith("data: "))
-
+ 
                 for (const line of lines) {
                     const data = line.replace("data: ", "")
                     if (data === "[DONE]") continue
@@ -191,9 +225,9 @@ export function AIChat({ initialMessages = [], className, aiContext = "", trigge
                     } catch {}
                 }
             }
-
+ 
             const confidence = Math.floor(Math.random() * 15) + 80
-
+ 
             const newMsgId = (Date.now() + 1).toString()
             setStreaming("")
             setMessages((prev) => [
@@ -205,13 +239,13 @@ export function AIChat({ initialMessages = [], className, aiContext = "", trigge
                     confidence,
                 },
             ])
-
+ 
             // ── VOICE OUTPUT — auto-play + track speakingId ──
             if (voiceEnabled && fullText) {
                 setSpeakingId(newMsgId)
                 speakText(fullText, () => setSpeakingId(null))
             }
-
+ 
         } catch (err) {
             console.error("Groq error:", err)
             setError(err.message)
@@ -219,14 +253,14 @@ export function AIChat({ initialMessages = [], className, aiContext = "", trigge
             setStreaming("")
         }
     }
-
+ 
     const handleSubmit = (e) => {
         e.preventDefault()
         sendMessage(input)
     }
-
+ 
     const showSuggestions = !hasSent && !loading
-
+ 
     return (
         <div className={cn("flex flex-col h-full", className)}>
             {/* Messages */}
@@ -241,7 +275,7 @@ export function AIChat({ initialMessages = [], className, aiContext = "", trigge
                         </p>
                     </div>
                 )}
-
+ 
                 {messages.map((message) => (
                     <div
                         key={message.id}
@@ -303,7 +337,7 @@ export function AIChat({ initialMessages = [], className, aiContext = "", trigge
                         )}
                     </div>
                 ))}
-
+ 
                 {loading && (
                     <div className="glass mr-2 rounded-lg p-3">
                         <div className="flex items-center gap-2 mb-2">
@@ -320,7 +354,7 @@ export function AIChat({ initialMessages = [], className, aiContext = "", trigge
                         </div>
                     </div>
                 )}
-
+ 
                 {streaming && (
                     <div className="glass mr-2 rounded-lg p-3">
                         <div className="flex items-center gap-2 mb-2">
@@ -335,16 +369,16 @@ export function AIChat({ initialMessages = [], className, aiContext = "", trigge
                         </p>
                     </div>
                 )}
-
+ 
                 {error && (
                     <div className="mr-2 rounded-lg p-3 bg-coral/10 border border-coral/20">
                         <p className="font-mono text-xs text-coral">⚠ {error}</p>
                     </div>
                 )}
-
+ 
                 <div ref={bottomRef} />
             </div>
-
+ 
             {showSuggestions && (
                 <div className="flex flex-wrap gap-1.5 mt-3 mb-2">
                     {SUGGESTED_PROMPTS.map((s) => (
@@ -359,7 +393,7 @@ export function AIChat({ initialMessages = [], className, aiContext = "", trigge
                     ))}
                 </div>
             )}
-
+ 
             {/* Input + Voice Toggle */}
             <form onSubmit={handleSubmit} className="mt-2 flex gap-2">
                 <button
