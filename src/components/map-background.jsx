@@ -545,14 +545,12 @@ export function MapBackground({
         initCommunityReportsLayer()
       }
  
-      // 6. Re-paint route lines directly via _paintRouteLayers (not drawRoutes).
-      //    drawRoutes would hit the isStyleLoaded() guard which returns false even
-      //    inside style.load (it checks tiles, not just the style spec), queue a
-      //    second once("style.load") that never fires, and bail out with no lines drawn.
-      //    _paintRouteLayers skips that guard entirely — we know we're ready here.
+      // 6. Re-paint route lines after style switch.
+      //    Use _paintRoutesSafe which retries via rAF — satellite tiles can cause
+      //    addSource to throw even inside style.load, so we retry until ready.
       const { routes, selectedId } = lastRoutesRef.current
       if (routes?.length) {
-        _paintRouteLayers(routes, selectedId)
+        _paintRoutesSafe(routes, selectedId, 0)
       }
     })
   }
@@ -908,15 +906,39 @@ export function MapBackground({
  
     removeAllRoutes()
  
-    if (!map.current.isStyleLoaded()) {
-      // Genuine cold-start case (first map init, not a toggle).
-      // Safe to register once("style.load") here because no handleStyleChange
-      // listener is competing for it.
-      map.current.once("style.load", () => _paintRouteLayers(routes, selectedId))
+    // isStyleLoaded() is unreliable for satellite — it checks tile loading too,
+    // and satellite tiles take much longer than the style spec itself. On satellite,
+    // isStyleLoaded() often returns false even when addLayer/addSource work fine.
+    // Instead we try to paint directly and retry up to 20 times (2 seconds total)
+    // via rAF until the style actually accepts the layers.
+    _paintRoutesSafe(routes, selectedId, 0)
+  }
+ 
+  // Retry wrapper around _paintRouteLayers that handles the satellite tile-loading
+  // window where isStyleLoaded() returns false but the map is actually ready.
+  function _paintRoutesSafe(routes, selectedId, attempt) {
+    if (!map.current || attempt > 20) return
+ 
+    // Check if map style is ready enough to accept sources/layers.
+    // We check for the style's loaded state via the internal style object
+    // rather than isStyleLoaded() which requires all tiles to be loaded too.
+    const styleReady = map.current.getStyle() &&
+      map.current.getStyle().layers &&
+      map.current.getStyle().layers.length > 0
+ 
+    if (!styleReady) {
+      requestAnimationFrame(() => _paintRoutesSafe(routes, selectedId, attempt + 1))
       return
     }
  
-    _paintRouteLayers(routes, selectedId)
+    try {
+      _paintRouteLayers(routes, selectedId)
+    } catch (err) {
+      // Style not fully ready yet — retry after next frame
+      if (attempt < 20) {
+        requestAnimationFrame(() => _paintRoutesSafe(routes, selectedId, attempt + 1))
+      }
+    }
   }
  
   function highlightRoute(selectedId) {
