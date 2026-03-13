@@ -43,13 +43,13 @@ function NoJourneyOverlay({ mapOverlayEl }) {
               <Navigation className="w-9 h-9 text-amber2"/>
             </div>
           </div>
-          <h2 className="font-serif italic text-2xl text-foreground mb-2">No Active Journey</h2>
+          <h2 className="font-serif italic text-2xl text-foreground mb-2">Set Your Navigation</h2>
           <p className="font-sans text-sm text-muted-foreground mb-8 leading-relaxed">
-            Set your origin and destination to calculate your safest route before starting navigation.
+            Plan a journey first — set your origin and destination to calculate your safest route.
           </p>
           <button onClick={()=>navigate("/journey")}
             className="w-full py-4 rounded-xl bg-mint text-bg font-mono text-sm font-bold flex items-center justify-center gap-3 hover:bg-mint/90 shadow-[0_0_20px_rgba(0,229,160,0.2)] transition-all mb-3">
-            <MapPin className="w-5 h-5"/> Plan a Journey
+            <MapPin className="w-5 h-5"/> Set Navigation
           </button>
           <button onClick={()=>navigate("/")}
             className="w-full py-3 rounded-xl border border-border text-muted-foreground font-mono text-xs uppercase hover:border-border/70 hover:text-foreground transition-colors">
