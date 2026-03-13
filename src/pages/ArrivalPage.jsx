@@ -20,7 +20,7 @@ function isRealLocation(str) {
  
 export default function ArrivalPage() {
     const navigate = useNavigate()
-    const { selectedRoute, setJourneyPlan } = useSafety()
+    const { selectedRoute, setJourneyPlan, cancelJourney } = useSafety()
  
     const from     = selectedRoute?.from     || null
     const to       = selectedRoute?.to       || null
@@ -162,7 +162,7 @@ export default function ArrivalPage() {
                     </GlassPanel>
  
                     <button
-                        onClick={() => navigate("/dashboard")}
+                        onClick={() => { cancelJourney(true); navigate("/dashboard") }}
                         className="btn-mint-gradient w-full py-4 rounded-xl font-mono text-sm text-bg font-bold flex items-center justify-center gap-2 mt-4"
                     >
                         RETURN TO DASHBOARD
