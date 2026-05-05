@@ -4,7 +4,7 @@
 
 ![SafeRoute AI+ Banner](https://img.shields.io/badge/SafeRoute-AI%2B-0ea5e9?style=for-the-badge&logo=mapbox&logoColor=white)
 ![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)
-![Hackathon](https://img.shields.io/badge/World%20Wide%20Vibes%20Hackathon-Top%205%25-gold?style=for-the-badge)
+![Hackathon](https://img.shields.io/badge/World%20Wide%20Vibes%20Hackathon-Top%2010%25-gold?style=for-the-badge)
 ![Category](https://img.shields.io/badge/Category-Public%20Safety-red?style=for-the-badge)
 ![Built By](https://img.shields.io/badge/Built%20Solo-Nwaodu%20Nkechukwu-0ea5e9?style=for-the-badge)
 
