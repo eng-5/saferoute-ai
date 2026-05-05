@@ -83,9 +83,16 @@ SafeRoute AI+ is a production-grade personal safety navigator that goes far beyo
 
 ### Screenshots
 
-| Dashboard — AI Place Intelligence | Journey — Three Live Routes | Navigation — Active Monitoring |
-|---|---|---|
-| ![Dashboard](screenshots/dashboard.png) | ![Journey](screenshots/journey.png) | ![Navigation](screenshots/navigation.png) |
+<p align="center">
+  <img src="screenshots/dashboard.png" width="48%" alt="Dashboard" />
+  &nbsp;
+  <img src="screenshots/journey.png" width="48%" alt="Journey" />
+</p>
+
+<p align="center">
+  <img src="screenshots/navigation.png" width="60%" alt="Navigation" />
+</p>
+
 ---
 
 ## 🛠 Tech Stack
@@ -135,8 +142,8 @@ User Device
 
 ```bash
 # Clone the repository
-git clone https://github.com/eng-5/saferoute-ai-plus.git
-cd saferoute-ai-plus
+git clone https://github.com/eng-5/saferoute-ai.git
+cd saferoute-ai
 
 # Install dependencies
 npm install
